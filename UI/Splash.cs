@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,7 +20,9 @@ namespace EmpManagement
 
         private void Splash_Load(object sender, EventArgs e)
         {
-
+            //Thread.Sleep(5000);
+            //Login login = new Login();
+            //login.ShowDialog();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -31,5 +34,6 @@ namespace EmpManagement
         {
 
         }
+
     }
 }

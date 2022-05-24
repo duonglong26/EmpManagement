@@ -78,3 +78,5 @@ C:\Users\HP\Máy tính\MyProjects\EmpManagement\bin\Debug\Bunifu.UI.WinForms.Bun
 C:\Users\HP\Máy tính\MyProjects\EmpManagement\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
 C:\Users\HP\Máy tính\MyProjects\EmpManagement\obj\Debug\EmpManagement.Login.resources
 C:\Users\HP\Máy tính\MyProjects\EmpManagement\obj\Debug\EmpManagement.csproj.CopyComplete
+C:\Users\HP\Máy tính\MyProjects\EmpManagement\obj\Debug\EmpManagement.Home.resources
+C:\Users\HP\Máy tính\MyProjects\EmpManagement\obj\Debug\EmpManagement.Employee.resources
