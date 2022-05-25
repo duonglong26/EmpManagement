@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnGoToHome = new MaterialSkin.Controls.MaterialButton();
             this.btnEditEmp = new MaterialSkin.Controls.MaterialButton();
             this.btnDeleteEmp = new MaterialSkin.Controls.MaterialButton();
@@ -48,11 +47,12 @@
             this.txtEmpCode = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.exitAppication = new System.Windows.Forms.PictureBox();
+            this.empDataGridViews = new System.Windows.Forms.DataGridView();
+            this.reloadDataGirdViews = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exitAppication)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadDataGirdViews)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +69,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.reloadDataGirdViews);
+            this.panel1.Controls.Add(this.empDataGridViews);
             this.panel1.Controls.Add(this.btnGoToHome);
             this.panel1.Controls.Add(this.btnEditEmp);
             this.panel1.Controls.Add(this.btnDeleteEmp);
@@ -85,16 +86,8 @@
             this.panel1.Controls.Add(this.txtEmpCode);
             this.panel1.Location = new System.Drawing.Point(1, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 612);
+            this.panel1.Size = new System.Drawing.Size(1266, 553);
             this.panel1.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(675, 39);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(490, 491);
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
             // 
             // btnGoToHome
             // 
@@ -152,6 +145,7 @@
             this.btnDeleteEmp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDeleteEmp.UseAccentColor = false;
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
+            this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
             // btnAddEmp
             // 
@@ -479,16 +473,26 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // exitAppication
+            // empDataGridViews
             // 
-            this.exitAppication.Image = ((System.Drawing.Image)(resources.GetObject("exitAppication.Image")));
-            this.exitAppication.Location = new System.Drawing.Point(1239, -1);
-            this.exitAppication.Name = "exitAppication";
-            this.exitAppication.Size = new System.Drawing.Size(28, 30);
-            this.exitAppication.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exitAppication.TabIndex = 23;
-            this.exitAppication.TabStop = false;
-            this.exitAppication.Click += new System.EventHandler(this.exitAppication_Click);
+            this.empDataGridViews.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.empDataGridViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.empDataGridViews.Location = new System.Drawing.Point(594, 39);
+            this.empDataGridViews.Name = "empDataGridViews";
+            this.empDataGridViews.Size = new System.Drawing.Size(649, 491);
+            this.empDataGridViews.TabIndex = 22;
+            this.empDataGridViews.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empDataGridViews_CellContentClick);
+            // 
+            // reloadDataGirdViews
+            // 
+            this.reloadDataGirdViews.Image = ((System.Drawing.Image)(resources.GetObject("reloadDataGirdViews.Image")));
+            this.reloadDataGirdViews.Location = new System.Drawing.Point(919, 3);
+            this.reloadDataGirdViews.Name = "reloadDataGirdViews";
+            this.reloadDataGirdViews.Size = new System.Drawing.Size(33, 33);
+            this.reloadDataGirdViews.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reloadDataGirdViews.TabIndex = 23;
+            this.reloadDataGirdViews.TabStop = false;
+            this.reloadDataGirdViews.Click += new System.EventHandler(this.reloadDataGirdViews_Click);
             // 
             // Employee
             // 
@@ -496,20 +500,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1268, 694);
-            this.Controls.Add(this.exitAppication);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee";
+            this.Text = "Employee Manager";
             this.Load += new System.EventHandler(this.Employee_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exitAppication)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reloadDataGirdViews)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,8 +536,8 @@
         private MaterialSkin.Controls.MaterialButton btnDeleteEmp;
         private MaterialSkin.Controls.MaterialButton btnAddEmp;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.PictureBox exitAppication;
+        private System.Windows.Forms.DataGridView empDataGridViews;
+        private System.Windows.Forms.PictureBox reloadDataGirdViews;
     }
 }
