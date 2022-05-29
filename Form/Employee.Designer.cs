@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.saveOrUpdateEmp = new MaterialSkin.Controls.MaterialButton();
+            this.idEmp = new System.Windows.Forms.Button();
             this.reloadDataGirdViews = new System.Windows.Forms.PictureBox();
             this.empDataGridViews = new System.Windows.Forms.DataGridView();
             this.btnGoToHome = new MaterialSkin.Controls.MaterialButton();
@@ -47,8 +49,6 @@
             this.txtEmpCode = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.idEmp = new System.Windows.Forms.Button();
-            this.saveOrUpdateEmp = new MaterialSkin.Controls.MaterialButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reloadDataGirdViews)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).BeginInit();
@@ -88,6 +88,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1266, 553);
             this.panel1.TabIndex = 3;
+            // 
+            // saveOrUpdateEmp
+            // 
+            this.saveOrUpdateEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveOrUpdateEmp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveOrUpdateEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.saveOrUpdateEmp.Depth = 0;
+            this.saveOrUpdateEmp.HighEmphasis = true;
+            this.saveOrUpdateEmp.Icon = null;
+            this.saveOrUpdateEmp.Location = new System.Drawing.Point(35, 494);
+            this.saveOrUpdateEmp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.saveOrUpdateEmp.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveOrUpdateEmp.Name = "saveOrUpdateEmp";
+            this.saveOrUpdateEmp.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.saveOrUpdateEmp.Size = new System.Drawing.Size(64, 36);
+            this.saveOrUpdateEmp.TabIndex = 26;
+            this.saveOrUpdateEmp.Text = "SAVE";
+            this.saveOrUpdateEmp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.saveOrUpdateEmp.UseAccentColor = false;
+            this.saveOrUpdateEmp.UseVisualStyleBackColor = true;
+            this.saveOrUpdateEmp.Click += new System.EventHandler(this.saveOrUpdateEmp_Click);
+            // 
+            // idEmp
+            // 
+            this.idEmp.BackColor = System.Drawing.Color.Black;
+            this.idEmp.Cursor = System.Windows.Forms.Cursors.No;
+            this.idEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idEmp.ForeColor = System.Drawing.Color.White;
+            this.idEmp.Location = new System.Drawing.Point(502, 10);
+            this.idEmp.Name = "idEmp";
+            this.idEmp.Size = new System.Drawing.Size(45, 28);
+            this.idEmp.TabIndex = 25;
+            this.idEmp.Text = "ID";
+            this.idEmp.UseVisualStyleBackColor = false;
             // 
             // reloadDataGirdViews
             // 
@@ -131,6 +165,7 @@
             this.btnGoToHome.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnGoToHome.UseAccentColor = false;
             this.btnGoToHome.UseVisualStyleBackColor = true;
+            this.btnGoToHome.Click += new System.EventHandler(this.btnGoToHome_Click);
             // 
             // btnDeleteEmp
             // 
@@ -461,40 +496,6 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // idEmp
-            // 
-            this.idEmp.BackColor = System.Drawing.Color.Black;
-            this.idEmp.Cursor = System.Windows.Forms.Cursors.No;
-            this.idEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.idEmp.ForeColor = System.Drawing.Color.White;
-            this.idEmp.Location = new System.Drawing.Point(502, 10);
-            this.idEmp.Name = "idEmp";
-            this.idEmp.Size = new System.Drawing.Size(45, 28);
-            this.idEmp.TabIndex = 25;
-            this.idEmp.Text = "ID";
-            this.idEmp.UseVisualStyleBackColor = false;
-            // 
-            // saveOrUpdateEmp
-            // 
-            this.saveOrUpdateEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.saveOrUpdateEmp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveOrUpdateEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.saveOrUpdateEmp.Depth = 0;
-            this.saveOrUpdateEmp.HighEmphasis = true;
-            this.saveOrUpdateEmp.Icon = null;
-            this.saveOrUpdateEmp.Location = new System.Drawing.Point(35, 494);
-            this.saveOrUpdateEmp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.saveOrUpdateEmp.MouseState = MaterialSkin.MouseState.HOVER;
-            this.saveOrUpdateEmp.Name = "saveOrUpdateEmp";
-            this.saveOrUpdateEmp.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.saveOrUpdateEmp.Size = new System.Drawing.Size(64, 36);
-            this.saveOrUpdateEmp.TabIndex = 26;
-            this.saveOrUpdateEmp.Text = "SAVE";
-            this.saveOrUpdateEmp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.saveOrUpdateEmp.UseAccentColor = false;
-            this.saveOrUpdateEmp.UseVisualStyleBackColor = true;
-            this.saveOrUpdateEmp.Click += new System.EventHandler(this.saveOrUpdateEmp_Click);
             // 
             // Employee
             // 

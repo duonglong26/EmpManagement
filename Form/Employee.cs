@@ -30,8 +30,8 @@ namespace EmpManagement
 
         private bool isEmptyField()
         {
-            return txtEmpCode.Text == "" || txtEmpName.Text == "" || txtEmpPhone.Text == "" ||
-                txtEmpEducation.Text == "" || txtEmpAddress.Text == "";
+            return txtEmpCode.Text.Trim() == "" || txtEmpName.Text.Trim() == "" || txtEmpPhone.Text.Trim() == "" ||
+                txtEmpEducation.Text.Trim() == "" || txtEmpAddress.Text.Trim() == "";
         }
 
         private void empDateOfBirth_ValueChanged(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace EmpManagement
                 try
                 {
                     conn.Open();
-                    String query = Utils.getQueryInactiveEmp(txtEmpCode.Text);
+                    String query = Utils.getQueryInactiveEmp(idEmp.Text);
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Delete Success!");
@@ -162,7 +162,7 @@ namespace EmpManagement
                 try
                 {
                     conn.Open();
-                    String query = Utils.getQueryUpdateEmpByCode(idEmp.Text.Trim(), txtEmpCode.Text.Trim(), txtEmpName.Text.Trim(), txtEmpAddress.Text.Trim(),
+                    String query = Utils.getQueryUpdateEmpById(idEmp.Text.Trim(), txtEmpCode.Text.Trim(), txtEmpName.Text.Trim(), txtEmpAddress.Text.Trim(),
                        cbbEmpPosition.Text.Trim(), cbbEmpGender.Text.Trim(), empDateOfBirth.Value.Date.ToString("yyyy-MM-dd"), txtEmpPhone.Text.Trim(), txtEmpEducation.Text.Trim());
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
@@ -180,6 +180,12 @@ namespace EmpManagement
 
         private void saveOrUpdateEmp_Click(object sender, EventArgs e)
         {
+            if (isExitCodeEmp())
+            {
+                MessageBox.Show("Code is already exist!");
+                return;
+            }
+
             if (idEmp.Text == Utils.ID_EMPLOYEE_DEFAULT)
             {
                 saveEmp();
@@ -188,6 +194,34 @@ namespace EmpManagement
             {
                 updateEmp();
             }
+        }
+
+        private void btnGoToHome_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Hide();
+        }
+
+        private bool isExitCodeEmp()
+        {
+            try
+            {
+                conn.Open();
+                String query = Utils.getQueryCheckExitsCode(txtEmpCode.Text.Trim());
+                SqlCommand cmd = new SqlCommand(query, conn);
+                Int32 result = (Int32)cmd.ExecuteScalar();
+                conn.Close();
+                if (result > 0)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return false;
         }
     }
 }

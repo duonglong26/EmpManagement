@@ -12,13 +12,13 @@ namespace EmpManagement
             String gender, String date_of_birth, String phone, String education)
         {
             return "insert into Employee (code, name, address, position, gender, date_of_birth, phone, education) " +
-                "values ('" + code + "','" + name + "','" + address + "','" + position + "','" + gender + "','" + 
+                "values ('" + code + "','" + name + "','" + address + "','" + position + "','" + gender + "','" +
                 date_of_birth + "','" + phone + "','" + education + "')";
         }
-        public static String getQueryUpdateEmpByCode(String id,String code, String name, String address, String position,
+        public static String getQueryUpdateEmpById(String id, String code, String name, String address, String position,
             String gender, String date_of_birth, String phone, String education)
         {
-            return "update Employee set code = '" + code + "', name = '" + name + "', address = '" + address + 
+            return "update Employee set code = '" + code + "', name = '" + name + "', address = '" + address +
                 "', position = '" + position + "', gender = '" + gender + "', date_of_birth = '" + date_of_birth +
                 "', phone = '" + phone + "', education = '" + education + "' where id = " + id;
         }
@@ -31,9 +31,14 @@ namespace EmpManagement
         }
 
 
-        public static String getQueryInactiveEmp(String code)
+        public static String getQueryInactiveEmp(String id)
         {
-            return "update Employee set active = 0 where code = " + code;
+            return "update Employee set active = 0 where id = " + id;
+        }
+
+        public static String getQueryCheckExitsCode(String code)
+        {
+            return "select count(*) from Employee where code = '" + code + "' and active != 0";
         }
     }
 }

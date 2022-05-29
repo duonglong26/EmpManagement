@@ -16,10 +16,39 @@ namespace EmpManagement
         {
             InitializeComponent();
         }
+        private void labelOpenEmployee_Click(object sender, EventArgs e)
+        {
+            handleOpenEmployee();
+        }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void pictureOpenEmployee_Click(object sender, EventArgs e)
+        {
+            handleOpenEmployee();
+        }
+
+        private void handleOpenEmployee()
+        {
+            Employee employee = new Employee();
+            employee.Show();
+            this.Hide();
+        }
+
+        private void openFormLogin_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void openFormSearchEmp_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void pictureOpenFormSearchEmp_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

@@ -32,19 +32,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.openFormSearchEmp = new System.Windows.Forms.Label();
+            this.labelOpenEmployee = new System.Windows.Forms.Label();
+            this.pictureOpenFormSearchEmp = new System.Windows.Forms.PictureBox();
+            this.pictureOpenEmployee = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.openFormLogin = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureOpenFormSearchEmp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureOpenEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -71,36 +68,65 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.openFormSearchEmp);
+            this.panel1.Controls.Add(this.labelOpenEmployee);
+            this.panel1.Controls.Add(this.pictureOpenFormSearchEmp);
+            this.panel1.Controls.Add(this.pictureOpenEmployee);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(-1, 87);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 265);
             this.panel1.TabIndex = 3;
             // 
-            // materialButton1
+            // openFormSearchEmp
             // 
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(709, 27);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(78, 36);
-            this.materialButton1.TabIndex = 4;
-            this.materialButton1.Text = "Logout";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
+            this.openFormSearchEmp.AutoSize = true;
+            this.openFormSearchEmp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openFormSearchEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.openFormSearchEmp.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.openFormSearchEmp.Location = new System.Drawing.Point(507, 193);
+            this.openFormSearchEmp.Name = "openFormSearchEmp";
+            this.openFormSearchEmp.Size = new System.Drawing.Size(70, 24);
+            this.openFormSearchEmp.TabIndex = 10;
+            this.openFormSearchEmp.Text = "Search";
+            this.openFormSearchEmp.Click += new System.EventHandler(this.openFormSearchEmp_Click);
+            // 
+            // labelOpenEmployee
+            // 
+            this.labelOpenEmployee.AutoSize = true;
+            this.labelOpenEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelOpenEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOpenEmployee.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.labelOpenEmployee.Location = new System.Drawing.Point(222, 193);
+            this.labelOpenEmployee.Name = "labelOpenEmployee";
+            this.labelOpenEmployee.Size = new System.Drawing.Size(96, 24);
+            this.labelOpenEmployee.TabIndex = 9;
+            this.labelOpenEmployee.Text = "Employee";
+            this.labelOpenEmployee.Click += new System.EventHandler(this.labelOpenEmployee_Click);
+            // 
+            // pictureOpenFormSearchEmp
+            // 
+            this.pictureOpenFormSearchEmp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureOpenFormSearchEmp.Image = ((System.Drawing.Image)(resources.GetObject("pictureOpenFormSearchEmp.Image")));
+            this.pictureOpenFormSearchEmp.Location = new System.Drawing.Point(485, 66);
+            this.pictureOpenFormSearchEmp.Name = "pictureOpenFormSearchEmp";
+            this.pictureOpenFormSearchEmp.Size = new System.Drawing.Size(99, 124);
+            this.pictureOpenFormSearchEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureOpenFormSearchEmp.TabIndex = 7;
+            this.pictureOpenFormSearchEmp.TabStop = false;
+            this.pictureOpenFormSearchEmp.Click += new System.EventHandler(this.pictureOpenFormSearchEmp_Click);
+            // 
+            // pictureOpenEmployee
+            // 
+            this.pictureOpenEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureOpenEmployee.Image = ((System.Drawing.Image)(resources.GetObject("pictureOpenEmployee.Image")));
+            this.pictureOpenEmployee.Location = new System.Drawing.Point(219, 66);
+            this.pictureOpenEmployee.Name = "pictureOpenEmployee";
+            this.pictureOpenEmployee.Size = new System.Drawing.Size(99, 124);
+            this.pictureOpenEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureOpenEmployee.TabIndex = 6;
+            this.pictureOpenEmployee.TabStop = false;
+            this.pictureOpenEmployee.Click += new System.EventHandler(this.pictureOpenEmployee_Click);
             // 
             // label2
             // 
@@ -113,68 +139,26 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "EmpiSoft";
             // 
-            // pictureBox2
+            // openFormLogin
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(110, 66);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(99, 124);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(337, 66);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(99, 124);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(545, 66);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(99, 124);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 8;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(110, 197);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 24);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Employee";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(360, 197);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 24);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "View";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label5.Location = new System.Drawing.Point(562, 197);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 24);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Salary";
+            this.openFormLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.openFormLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.openFormLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.openFormLogin.Depth = 0;
+            this.openFormLogin.HighEmphasis = true;
+            this.openFormLogin.Icon = null;
+            this.openFormLogin.Location = new System.Drawing.Point(709, 27);
+            this.openFormLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.openFormLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.openFormLogin.Name = "openFormLogin";
+            this.openFormLogin.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.openFormLogin.Size = new System.Drawing.Size(78, 36);
+            this.openFormLogin.TabIndex = 4;
+            this.openFormLogin.Text = "Logout";
+            this.openFormLogin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.openFormLogin.UseAccentColor = false;
+            this.openFormLogin.UseVisualStyleBackColor = true;
+            this.openFormLogin.Click += new System.EventHandler(this.openFormLogin_Click);
             // 
             // Home
             // 
@@ -182,7 +166,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.openFormLogin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -193,9 +177,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureOpenFormSearchEmp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureOpenEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,13 +188,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSkin.Controls.MaterialButton openFormLogin;
+        private System.Windows.Forms.PictureBox pictureOpenFormSearchEmp;
+        private System.Windows.Forms.PictureBox pictureOpenEmployee;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label openFormSearchEmp;
+        private System.Windows.Forms.Label labelOpenEmployee;
     }
 }

@@ -31,10 +31,9 @@ namespace EmpManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(txtPassword.Text);
-            Splash splash = new Splash();
-
-            splash.Show();
+            Home home = new Home();
+            home.Show();
+            this.Hide();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
