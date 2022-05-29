@@ -43,9 +43,9 @@ namespace EmpManagement
             return "update Employee set active = 0 where id = " + id;
         }
 
-        public static String getQueryCheckExistCodeEmp(String code)
+        public static String getQueryCheckExistCodeEmp(String code, String id)
         {
-            return "select count(*) from Employee where code = '" + code + "' and active != 0 and create_by = '" + Session.sessionUsername + "'";
+            return "select count(*) from Employee where code = '" + code + "' and active != 0 and id != '" + id +"' and create_by = '" + Session.sessionUsername + "'";
         }
 
         public static String getQuerySearchEmp(String code, String name, String address, String position, String gender)
@@ -55,15 +55,15 @@ namespace EmpManagement
                 ", education as 'Education' from Employee where active != 0 and create_by = '" + Session.sessionUsername + "'";
             if (code != "")
             {
-                query += " and code like '" + code + "'";
+                query += " and code like '%" + code + "%'";
             }
             if (name != "")
             {
-                query += " and name like '" + name + "'";
+                query += " and name like '%" + name + "%'";
             }
             if (address != "")
             {
-                query += " and address like '" + address + "'";
+                query += " and address like '%" + address + "%'";
             }
             if (position != "")
             {

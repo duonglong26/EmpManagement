@@ -208,7 +208,15 @@ namespace EmpManagement
             try
             {
                 conn.Open();
-                String query = Utils.getQueryCheckExistCodeEmp(txtEmpCode.Text.Trim());
+                String query = "";
+                if (idEmp.Text.Trim() == Utils.ID_EMPLOYEE_DEFAULT)
+                {
+                    query = Utils.getQueryCheckExistCodeEmp(txtEmpCode.Text.Trim(), "");
+                }
+                else
+                {
+                    query = Utils.getQueryCheckExistCodeEmp(txtEmpCode.Text.Trim(), idEmp.Text.Trim());
+                }
                 SqlCommand cmd = new SqlCommand(query, conn);
                 Int32 result = (Int32)cmd.ExecuteScalar();
                 conn.Close();

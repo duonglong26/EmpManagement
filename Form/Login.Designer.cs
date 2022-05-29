@@ -161,6 +161,7 @@
             // btnLogin
             // 
             this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnLogin.Depth = 0;
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -182,6 +183,7 @@
             // btnSignUp
             // 
             this.btnSignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
@@ -191,7 +193,7 @@
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSignUp.Size = new System.Drawing.Size(66, 36);
+            this.btnSignUp.Size = new System.Drawing.Size(77, 36);
             this.btnSignUp.TabIndex = 8;
             this.btnSignUp.Text = "SIGN UP";
             this.btnSignUp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
