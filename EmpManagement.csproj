@@ -155,7 +155,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account.cs" />
+    <Compile Include="Enity\Account.cs" />
+    <Compile Include="Enity\Session.cs" />
     <Compile Include="Form\FilterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>

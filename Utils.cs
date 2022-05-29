@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmpManagement.Enity;
+using System;
 using System.Data.SqlClient;
 
 namespace EmpManagement
@@ -16,9 +17,9 @@ namespace EmpManagement
         public static String getQueryInsertEmp(String code, String name, String address, String position,
             String gender, String date_of_birth, String phone, String education)
         {
-            return "insert into Employee (code, name, address, position, gender, date_of_birth, phone, education) " +
+            return "insert into Employee (code, name, address, position, gender, date_of_birth, phone, education, create_by) " +
                 "values ('" + code + "','" + name + "','" + address + "','" + position + "','" + gender + "','" +
-                date_of_birth + "','" + phone + "','" + education + "')";
+                date_of_birth + "','" + phone + "','" + education + "','" + Session.sessionUsername + "')";
         }
 
         public static String getQueryUpdateEmpById(String id, String code, String name, String address, String position,
@@ -33,7 +34,7 @@ namespace EmpManagement
         {
             return "select ROW_NUMBER() OVER(ORDER BY id ASC) AS 'Order Number' ,id as 'Id', code as 'Code', name as 'Full Name', address as 'Address'" +
                 ", position as 'Position', gender as 'Gender', date_of_birth as 'Date Of Birth', phone as 'Phone'" +
-                ", education as 'Education' from Employee where active != 0";
+                ", education as 'Education' from Employee where active != 0 and create_by = '" + Session.sessionUsername + "'";
         }
 
 
@@ -44,14 +45,14 @@ namespace EmpManagement
 
         public static String getQueryCheckExistCodeEmp(String code)
         {
-            return "select count(*) from Employee where code = '" + code + "' and active != 0";
+            return "select count(*) from Employee where code = '" + code + "' and active != 0 and create_by = '" + Session.sessionUsername + "'";
         }
 
         public static String getQuerySearchEmp(String code, String name, String address, String position, String gender)
         {
             String query = "select ROW_NUMBER() OVER(ORDER BY id ASC) AS 'Order Number' ,id as 'Id', code as 'Code', name as 'Full Name', address as 'Address'" +
                 ", position as 'Position', gender as 'Gender', date_of_birth as 'Date Of Birth', phone as 'Phone'" +
-                ", education as 'Education' from Employee where active != 0";
+                ", education as 'Education' from Employee where active != 0 and create_by = '" + Session.sessionUsername + "'";
             if (code != "")
             {
                 query += " and code like '" + code + "'";

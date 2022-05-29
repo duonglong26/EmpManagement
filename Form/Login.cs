@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmpManagement.Enity;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -48,6 +49,7 @@ namespace EmpManagement
                     
                     if (checkPass)
                     {
+                        Session.sessionUsername = txtUsername.Text.Trim();
                         MessageBox.Show("Login success");
                         Home home = new Home();
                         home.Show();

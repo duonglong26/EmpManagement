@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using EmpManagement.Enity;
+using System;
 using System.Windows.Forms;
 
 namespace EmpManagement
@@ -35,6 +29,7 @@ namespace EmpManagement
 
         private void openFormLogin_Click(object sender, EventArgs e)
         {
+            Session.sessionUsername = null;
             Login login = new Login();
             login.Show();
             this.Hide();
