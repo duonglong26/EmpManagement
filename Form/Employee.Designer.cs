@@ -35,9 +35,7 @@
             this.reloadDataGirdViews = new System.Windows.Forms.PictureBox();
             this.empDataGridViews = new System.Windows.Forms.DataGridView();
             this.btnGoToHome = new MaterialSkin.Controls.MaterialButton();
-            this.btnEditEmp = new MaterialSkin.Controls.MaterialButton();
             this.btnDeleteEmp = new MaterialSkin.Controls.MaterialButton();
-            this.btnAddEmp = new MaterialSkin.Controls.MaterialButton();
             this.cbbEmpGender = new MaterialSkin.Controls.MaterialComboBox();
             this.cbbEmpPosition = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
@@ -49,6 +47,8 @@
             this.txtEmpCode = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.idEmp = new System.Windows.Forms.Button();
+            this.saveOrUpdateEmp = new MaterialSkin.Controls.MaterialButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reloadDataGirdViews)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).BeginInit();
@@ -69,12 +69,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.saveOrUpdateEmp);
+            this.panel1.Controls.Add(this.idEmp);
             this.panel1.Controls.Add(this.reloadDataGirdViews);
             this.panel1.Controls.Add(this.empDataGridViews);
             this.panel1.Controls.Add(this.btnGoToHome);
-            this.panel1.Controls.Add(this.btnEditEmp);
             this.panel1.Controls.Add(this.btnDeleteEmp);
-            this.panel1.Controls.Add(this.btnAddEmp);
             this.panel1.Controls.Add(this.cbbEmpGender);
             this.panel1.Controls.Add(this.cbbEmpPosition);
             this.panel1.Controls.Add(this.materialLabel1);
@@ -91,6 +91,7 @@
             // 
             // reloadDataGirdViews
             // 
+            this.reloadDataGirdViews.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reloadDataGirdViews.Image = ((System.Drawing.Image)(resources.GetObject("reloadDataGirdViews.Image")));
             this.reloadDataGirdViews.Location = new System.Drawing.Point(919, 3);
             this.reloadDataGirdViews.Name = "reloadDataGirdViews";
@@ -104,6 +105,7 @@
             // 
             this.empDataGridViews.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.empDataGridViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.empDataGridViews.Cursor = System.Windows.Forms.Cursors.Hand;
             this.empDataGridViews.Location = new System.Drawing.Point(594, 39);
             this.empDataGridViews.Name = "empDataGridViews";
             this.empDataGridViews.Size = new System.Drawing.Size(649, 491);
@@ -113,11 +115,12 @@
             // btnGoToHome
             // 
             this.btnGoToHome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnGoToHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGoToHome.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnGoToHome.Depth = 0;
             this.btnGoToHome.HighEmphasis = true;
             this.btnGoToHome.Icon = null;
-            this.btnGoToHome.Location = new System.Drawing.Point(294, 494);
+            this.btnGoToHome.Location = new System.Drawing.Point(212, 494);
             this.btnGoToHome.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnGoToHome.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGoToHome.Name = "btnGoToHome";
@@ -129,34 +132,15 @@
             this.btnGoToHome.UseAccentColor = false;
             this.btnGoToHome.UseVisualStyleBackColor = true;
             // 
-            // btnEditEmp
-            // 
-            this.btnEditEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnEditEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnEditEmp.Depth = 0;
-            this.btnEditEmp.HighEmphasis = true;
-            this.btnEditEmp.Icon = null;
-            this.btnEditEmp.Location = new System.Drawing.Point(117, 494);
-            this.btnEditEmp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnEditEmp.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnEditEmp.Name = "btnEditEmp";
-            this.btnEditEmp.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnEditEmp.Size = new System.Drawing.Size(64, 36);
-            this.btnEditEmp.TabIndex = 20;
-            this.btnEditEmp.Text = "EDIT";
-            this.btnEditEmp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnEditEmp.UseAccentColor = false;
-            this.btnEditEmp.UseVisualStyleBackColor = true;
-            this.btnEditEmp.Click += new System.EventHandler(this.btnEditEmp_Click);
-            // 
             // btnDeleteEmp
             // 
             this.btnDeleteEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeleteEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnDeleteEmp.Depth = 0;
             this.btnDeleteEmp.HighEmphasis = true;
             this.btnDeleteEmp.Icon = null;
-            this.btnDeleteEmp.Location = new System.Drawing.Point(201, 494);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(118, 494);
             this.btnDeleteEmp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDeleteEmp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnDeleteEmp.Name = "btnDeleteEmp";
@@ -168,26 +152,6 @@
             this.btnDeleteEmp.UseAccentColor = false;
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
             this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
-            // 
-            // btnAddEmp
-            // 
-            this.btnAddEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAddEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnAddEmp.Depth = 0;
-            this.btnAddEmp.HighEmphasis = true;
-            this.btnAddEmp.Icon = null;
-            this.btnAddEmp.Location = new System.Drawing.Point(35, 494);
-            this.btnAddEmp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnAddEmp.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnAddEmp.Name = "btnAddEmp";
-            this.btnAddEmp.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnAddEmp.Size = new System.Drawing.Size(64, 36);
-            this.btnAddEmp.TabIndex = 18;
-            this.btnAddEmp.Text = "ADD";
-            this.btnAddEmp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnAddEmp.UseAccentColor = false;
-            this.btnAddEmp.UseVisualStyleBackColor = true;
-            this.btnAddEmp.Click += new System.EventHandler(this.btnAddEmp_Click);
             // 
             // cbbEmpGender
             // 
@@ -205,7 +169,6 @@
             this.cbbEmpGender.IntegralHeight = false;
             this.cbbEmpGender.ItemHeight = 43;
             this.cbbEmpGender.Items.AddRange(new object[] {
-            "---No Option---",
             "Male",
             "Female"});
             this.cbbEmpGender.Location = new System.Drawing.Point(35, 147);
@@ -232,7 +195,6 @@
             this.cbbEmpPosition.IntegralHeight = false;
             this.cbbEmpPosition.ItemHeight = 43;
             this.cbbEmpPosition.Items.AddRange(new object[] {
-            "---No Option---",
             "Manager",
             "Internal",
             "Fresher Developer",
@@ -304,6 +266,7 @@
             this.txtEmpEducation.SkipLiterals = true;
             this.txtEmpEducation.TabIndex = 12;
             this.txtEmpEducation.TabStop = false;
+            this.txtEmpEducation.Text = " ";
             this.txtEmpEducation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEmpEducation.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtEmpEducation.TrailingIcon = null;
@@ -346,6 +309,7 @@
             this.txtEmpPhone.SkipLiterals = true;
             this.txtEmpPhone.TabIndex = 11;
             this.txtEmpPhone.TabStop = false;
+            this.txtEmpPhone.Text = " ";
             this.txtEmpPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEmpPhone.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtEmpPhone.TrailingIcon = null;
@@ -388,6 +352,7 @@
             this.txtEmpAddress.SkipLiterals = true;
             this.txtEmpAddress.TabIndex = 8;
             this.txtEmpAddress.TabStop = false;
+            this.txtEmpAddress.Text = " ";
             this.txtEmpAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEmpAddress.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtEmpAddress.TrailingIcon = null;
@@ -430,6 +395,7 @@
             this.txtEmpName.SkipLiterals = true;
             this.txtEmpName.TabIndex = 7;
             this.txtEmpName.TabStop = false;
+            this.txtEmpName.Text = " ";
             this.txtEmpName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEmpName.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtEmpName.TrailingIcon = null;
@@ -472,6 +438,7 @@
             this.txtEmpCode.SkipLiterals = true;
             this.txtEmpCode.TabIndex = 6;
             this.txtEmpCode.TabStop = false;
+            this.txtEmpCode.Text = " ";
             this.txtEmpCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEmpCode.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtEmpCode.TrailingIcon = null;
@@ -494,6 +461,40 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // idEmp
+            // 
+            this.idEmp.BackColor = System.Drawing.Color.Black;
+            this.idEmp.Cursor = System.Windows.Forms.Cursors.No;
+            this.idEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idEmp.ForeColor = System.Drawing.Color.White;
+            this.idEmp.Location = new System.Drawing.Point(502, 10);
+            this.idEmp.Name = "idEmp";
+            this.idEmp.Size = new System.Drawing.Size(45, 28);
+            this.idEmp.TabIndex = 25;
+            this.idEmp.Text = "ID";
+            this.idEmp.UseVisualStyleBackColor = false;
+            // 
+            // saveOrUpdateEmp
+            // 
+            this.saveOrUpdateEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.saveOrUpdateEmp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveOrUpdateEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.saveOrUpdateEmp.Depth = 0;
+            this.saveOrUpdateEmp.HighEmphasis = true;
+            this.saveOrUpdateEmp.Icon = null;
+            this.saveOrUpdateEmp.Location = new System.Drawing.Point(35, 494);
+            this.saveOrUpdateEmp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.saveOrUpdateEmp.MouseState = MaterialSkin.MouseState.HOVER;
+            this.saveOrUpdateEmp.Name = "saveOrUpdateEmp";
+            this.saveOrUpdateEmp.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.saveOrUpdateEmp.Size = new System.Drawing.Size(64, 36);
+            this.saveOrUpdateEmp.TabIndex = 26;
+            this.saveOrUpdateEmp.Text = "SAVE";
+            this.saveOrUpdateEmp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.saveOrUpdateEmp.UseAccentColor = false;
+            this.saveOrUpdateEmp.UseVisualStyleBackColor = true;
+            this.saveOrUpdateEmp.Click += new System.EventHandler(this.saveOrUpdateEmp_Click);
             // 
             // Employee
             // 
@@ -533,12 +534,12 @@
         private MaterialSkin.Controls.MaterialComboBox cbbEmpPosition;
         private MaterialSkin.Controls.MaterialComboBox cbbEmpGender;
         private MaterialSkin.Controls.MaterialButton btnGoToHome;
-        private MaterialSkin.Controls.MaterialButton btnEditEmp;
         private MaterialSkin.Controls.MaterialButton btnDeleteEmp;
-        private MaterialSkin.Controls.MaterialButton btnAddEmp;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridView empDataGridViews;
         private System.Windows.Forms.PictureBox reloadDataGirdViews;
+        private System.Windows.Forms.Button idEmp;
+        private MaterialSkin.Controls.MaterialButton saveOrUpdateEmp;
     }
 }
