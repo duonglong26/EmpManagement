@@ -134,8 +134,6 @@ namespace EmpManagement
             empDateOfBirth.Text = empDataGridViews.CurrentRow.Cells[6].Value.ToString();
             txtEmpPhone.Text = empDataGridViews.CurrentRow.Cells[7].Value.ToString();
             txtEmpEducation.Text = empDataGridViews.CurrentRow.Cells[8].Value.ToString();
-            //txtEmpCode.Focus();
-            //txtEmpName.Focus();
             cbbEmpGender.Focus();
             cbbEmpPosition.Focus();
         }
@@ -150,8 +148,11 @@ namespace EmpManagement
             empDateOfBirth.Text = "";
             txtEmpPhone.Text = "";
             txtEmpEducation.Text = "";
-            //txtEmpCode.Focus();
-            //txtEmpName.Focus();
+        }
+
+        private void btnEditEmp_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

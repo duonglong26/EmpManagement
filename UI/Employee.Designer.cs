@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reloadDataGirdViews = new System.Windows.Forms.PictureBox();
+            this.empDataGridViews = new System.Windows.Forms.DataGridView();
             this.btnGoToHome = new MaterialSkin.Controls.MaterialButton();
             this.btnEditEmp = new MaterialSkin.Controls.MaterialButton();
             this.btnDeleteEmp = new MaterialSkin.Controls.MaterialButton();
@@ -47,12 +49,10 @@
             this.txtEmpCode = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.empDataGridViews = new System.Windows.Forms.DataGridView();
-            this.reloadDataGirdViews = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reloadDataGirdViews)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,6 +88,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1266, 553);
             this.panel1.TabIndex = 3;
+            // 
+            // reloadDataGirdViews
+            // 
+            this.reloadDataGirdViews.Image = ((System.Drawing.Image)(resources.GetObject("reloadDataGirdViews.Image")));
+            this.reloadDataGirdViews.Location = new System.Drawing.Point(919, 3);
+            this.reloadDataGirdViews.Name = "reloadDataGirdViews";
+            this.reloadDataGirdViews.Size = new System.Drawing.Size(33, 33);
+            this.reloadDataGirdViews.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.reloadDataGirdViews.TabIndex = 23;
+            this.reloadDataGirdViews.TabStop = false;
+            this.reloadDataGirdViews.Click += new System.EventHandler(this.reloadDataGirdViews_Click);
+            // 
+            // empDataGridViews
+            // 
+            this.empDataGridViews.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.empDataGridViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.empDataGridViews.Location = new System.Drawing.Point(594, 39);
+            this.empDataGridViews.Name = "empDataGridViews";
+            this.empDataGridViews.Size = new System.Drawing.Size(649, 491);
+            this.empDataGridViews.TabIndex = 22;
+            this.empDataGridViews.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empDataGridViews_CellContentClick);
             // 
             // btnGoToHome
             // 
@@ -126,6 +147,7 @@
             this.btnEditEmp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnEditEmp.UseAccentColor = false;
             this.btnEditEmp.UseVisualStyleBackColor = true;
+            this.btnEditEmp.Click += new System.EventHandler(this.btnEditEmp_Click);
             // 
             // btnDeleteEmp
             // 
@@ -473,27 +495,6 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // empDataGridViews
-            // 
-            this.empDataGridViews.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.empDataGridViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empDataGridViews.Location = new System.Drawing.Point(594, 39);
-            this.empDataGridViews.Name = "empDataGridViews";
-            this.empDataGridViews.Size = new System.Drawing.Size(649, 491);
-            this.empDataGridViews.TabIndex = 22;
-            this.empDataGridViews.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empDataGridViews_CellContentClick);
-            // 
-            // reloadDataGirdViews
-            // 
-            this.reloadDataGirdViews.Image = ((System.Drawing.Image)(resources.GetObject("reloadDataGirdViews.Image")));
-            this.reloadDataGirdViews.Location = new System.Drawing.Point(919, 3);
-            this.reloadDataGirdViews.Name = "reloadDataGirdViews";
-            this.reloadDataGirdViews.Size = new System.Drawing.Size(33, 33);
-            this.reloadDataGirdViews.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.reloadDataGirdViews.TabIndex = 23;
-            this.reloadDataGirdViews.TabStop = false;
-            this.reloadDataGirdViews.Click += new System.EventHandler(this.reloadDataGirdViews_Click);
-            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -510,9 +511,9 @@
             this.Load += new System.EventHandler(this.Employee_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reloadDataGirdViews)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
