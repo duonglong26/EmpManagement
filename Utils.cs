@@ -84,5 +84,11 @@ namespace EmpManagement
         {
             return "insert into Account (username, password) values ('" + username + "', '" + password + "')";
         }
+
+
+        public static String getQueryAccountByUsername(String username)
+        {
+            return "select * from Account where username = '"  + username + "'";
+        }
     }
 }

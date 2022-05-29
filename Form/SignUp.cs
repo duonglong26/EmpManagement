@@ -35,10 +35,11 @@ namespace EmpManagement
                 try
                 {
                     conn.Open();
-                    String query = Utils.getQueryInsertAccount(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+                    String query = Utils.getQueryInsertAccount(txtUsername.Text.Trim(), BCrypt.Net.BCrypt.HashPassword(txtPassword.Text.Trim()));
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Success");
+                    handleBackToLogin();
                     conn.Close();
                 } catch (Exception ex)
                 {
@@ -76,9 +77,15 @@ namespace EmpManagement
 
         private void backToLogin_Click(object sender, EventArgs e)
         {
+            handleBackToLogin();
+        }
+
+        private void handleBackToLogin()
+        {
             Login login = new Login();
             login.Show();
             this.Hide();
         }
+
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -33,11 +34,37 @@ namespace EmpManagement
                 MessageBox.Show("Please fill username/password");
                 return;
             }
+            
+            try
+            {
+                conn.Open();
+                String query = Utils.getQueryAccountByUsername(txtUsername.Text.Trim());
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader sqlDataReader = cmd.ExecuteReader();
 
-
-            //Home home = new Home();
-            //home.Show();
-            //this.Hide();
+                while (sqlDataReader.Read())
+                {
+                    bool checkPass = BCrypt.Net.BCrypt.Verify(txtPassword.Text.Trim(), sqlDataReader["password"].ToString());
+                    
+                    if (checkPass)
+                    {
+                        MessageBox.Show("Login success");
+                        Home home = new Home();
+                        home.Show();
+                        this.Hide();
+                    }
+                    conn.Close();
+                    return;
+                }
+                
+                // account not found
+                MessageBox.Show("Login fail!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            conn.Close();
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
