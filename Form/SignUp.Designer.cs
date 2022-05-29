@@ -1,6 +1,6 @@
 ﻿namespace EmpManagement
 {
-    partial class Login
+    partial class SignUp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,50 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
+            this.close = new System.Windows.Forms.Button();
             this.txtUsername = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.txtPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.btnLogin = new MaterialSkin.Controls.MaterialButton();
             this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
-            this.close = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.backToLogin = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.backToLogin)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // close
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bradley Hand ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(183, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "EmpiSoft";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
+            this.close.BackColor = System.Drawing.Color.White;
+            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.close.Location = new System.Drawing.Point(470, -2);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(30, 30);
+            this.close.TabIndex = 10;
+            this.close.Text = "X";
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // txtUsername
             // 
@@ -82,13 +59,13 @@
             this.txtUsername.BeepOnError = false;
             this.txtUsername.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtUsername.Depth = 0;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsername.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtUsername.HidePromptOnLeave = false;
             this.txtUsername.HideSelection = true;
             this.txtUsername.Hint = "Username";
             this.txtUsername.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtUsername.LeadingIcon = null;
-            this.txtUsername.Location = new System.Drawing.Point(114, 53);
+            this.txtUsername.Location = new System.Drawing.Point(136, 58);
             this.txtUsername.Mask = "";
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
@@ -107,7 +84,7 @@
             this.txtUsername.ShortcutsEnabled = true;
             this.txtUsername.Size = new System.Drawing.Size(250, 48);
             this.txtUsername.SkipLiterals = true;
-            this.txtUsername.TabIndex = 5;
+            this.txtUsername.TabIndex = 11;
             this.txtUsername.TabStop = false;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
@@ -130,12 +107,12 @@
             this.txtPassword.Hint = "Password";
             this.txtPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(114, 119);
+            this.txtPassword.Location = new System.Drawing.Point(136, 127);
             this.txtPassword.Mask = "";
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PrefixSuffixText = null;
             this.txtPassword.PromptChar = '_';
             this.txtPassword.ReadOnly = false;
@@ -149,7 +126,7 @@
             this.txtPassword.ShortcutsEnabled = true;
             this.txtPassword.Size = new System.Drawing.Size(250, 48);
             this.txtPassword.SkipLiterals = true;
-            this.txtPassword.TabIndex = 6;
+            this.txtPassword.TabIndex = 12;
             this.txtPassword.TabStop = false;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
@@ -158,78 +135,54 @@
             this.txtPassword.ValidatingType = null;
             this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
             // 
-            // btnLogin
-            // 
-            this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnLogin.Depth = 0;
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnLogin.HighEmphasis = true;
-            this.btnLogin.Icon = null;
-            this.btnLogin.Location = new System.Drawing.Point(154, 197);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnLogin.Size = new System.Drawing.Size(64, 36);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "LOGIN";
-            this.btnLogin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnLogin.UseAccentColor = false;
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
             // btnSignUp
             // 
             this.btnSignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(250, 197);
+            this.btnSignUp.Location = new System.Drawing.Point(217, 184);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSignUp.Size = new System.Drawing.Size(66, 36);
-            this.btnSignUp.TabIndex = 8;
+            this.btnSignUp.Size = new System.Drawing.Size(77, 36);
+            this.btnSignUp.TabIndex = 13;
             this.btnSignUp.Text = "SIGN UP";
             this.btnSignUp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSignUp.UseAccentColor = false;
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
-            // close
+            // backToLogin
             // 
-            this.close.BackColor = System.Drawing.Color.White;
-            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.close.Location = new System.Drawing.Point(440, -4);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(30, 30);
-            this.close.TabIndex = 9;
-            this.close.Text = "X";
-            this.close.UseVisualStyleBackColor = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
+            this.backToLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backToLogin.Image = ((System.Drawing.Image)(resources.GetObject("backToLogin.Image")));
+            this.backToLogin.Location = new System.Drawing.Point(-3, -2);
+            this.backToLogin.Name = "backToLogin";
+            this.backToLogin.Size = new System.Drawing.Size(34, 39);
+            this.backToLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.backToLogin.TabIndex = 14;
+            this.backToLogin.TabStop = false;
+            this.backToLogin.Click += new System.EventHandler(this.backToLogin_Click);
             // 
-            // Login
+            // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 261);
-            this.Controls.Add(this.close);
+            this.ClientSize = new System.Drawing.Size(499, 260);
+            this.Controls.Add(this.backToLogin);
             this.Controls.Add(this.btnSignUp);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "SignUp";
+            ((System.ComponentModel.ISupportInitialize)(this.backToLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,14 +190,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.Button close;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtUsername;
         private MaterialSkin.Controls.MaterialMaskedTextBox txtPassword;
-        private MaterialSkin.Controls.MaterialButton btnLogin;
         private MaterialSkin.Controls.MaterialButton btnSignUp;
-        private System.Windows.Forms.Button close;
+        private System.Windows.Forms.PictureBox backToLogin;
     }
 }

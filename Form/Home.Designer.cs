@@ -38,6 +38,7 @@
             this.pictureOpenEmployee = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.openFormLogin = new MaterialSkin.Controls.MaterialButton();
+            this.close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOpenFormSearchEmp)).BeginInit();
@@ -84,7 +85,7 @@
             this.openFormSearchEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openFormSearchEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openFormSearchEmp.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.openFormSearchEmp.Location = new System.Drawing.Point(507, 193);
+            this.openFormSearchEmp.Location = new System.Drawing.Point(497, 193);
             this.openFormSearchEmp.Name = "openFormSearchEmp";
             this.openFormSearchEmp.Size = new System.Drawing.Size(70, 24);
             this.openFormSearchEmp.TabIndex = 10;
@@ -133,7 +134,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(339, 15);
+            this.label2.Location = new System.Drawing.Point(355, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 5;
@@ -147,7 +148,7 @@
             this.openFormLogin.Depth = 0;
             this.openFormLogin.HighEmphasis = true;
             this.openFormLogin.Icon = null;
-            this.openFormLogin.Location = new System.Drawing.Point(709, 27);
+            this.openFormLogin.Location = new System.Drawing.Point(709, 384);
             this.openFormLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.openFormLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.openFormLogin.Name = "openFormLogin";
@@ -160,12 +161,26 @@
             this.openFormLogin.UseVisualStyleBackColor = true;
             this.openFormLogin.Click += new System.EventHandler(this.openFormLogin_Click);
             // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.White;
+            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.close.Location = new System.Drawing.Point(770, 0);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(30, 30);
+            this.close.TabIndex = 5;
+            this.close.Text = "X";
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.openFormLogin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -194,5 +209,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label openFormSearchEmp;
         private System.Windows.Forms.Label labelOpenEmployee;
+        private System.Windows.Forms.Button close;
     }
 }

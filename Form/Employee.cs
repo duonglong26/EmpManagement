@@ -11,7 +11,7 @@ namespace EmpManagement
         /*
             Connection to SQL Server
          */
-        SqlConnection conn = new SqlConnection(@"Data Source=LAPTOP-6E8C1ESV\SQLEXPRESS;Initial Catalog=MyEmployeeDb;Integrated Security=True");
+        SqlConnection conn = Utils.connectionSqlServer;
 
         public Employee()
         {
@@ -208,7 +208,7 @@ namespace EmpManagement
             try
             {
                 conn.Open();
-                String query = Utils.getQueryCheckExitsCode(txtEmpCode.Text.Trim());
+                String query = Utils.getQueryCheckExistCodeEmp(txtEmpCode.Text.Trim());
                 SqlCommand cmd = new SqlCommand(query, conn);
                 Int32 result = (Int32)cmd.ExecuteScalar();
                 conn.Close();
@@ -222,6 +222,21 @@ namespace EmpManagement
                 Console.WriteLine(ex.Message);
             }
             return false;
+        }
+
+        private void txtEmpPhone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

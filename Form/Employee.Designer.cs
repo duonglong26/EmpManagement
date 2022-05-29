@@ -49,6 +49,7 @@
             this.txtEmpCode = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.reloadDataGirdViews)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empDataGridViews)).BeginInit();
@@ -88,6 +89,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1266, 553);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // saveOrUpdateEmp
             // 
@@ -350,6 +352,7 @@
             this.txtEmpPhone.TrailingIcon = null;
             this.txtEmpPhone.UseSystemPasswordChar = false;
             this.txtEmpPhone.ValidatingType = null;
+            this.txtEmpPhone.Click += new System.EventHandler(this.txtEmpPhone_Click);
             // 
             // txtEmpAddress
             // 
@@ -497,19 +500,33 @@
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.White;
+            this.close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.close.Location = new System.Drawing.Point(1237, -2);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(30, 30);
+            this.close.TabIndex = 23;
+            this.close.Text = "X";
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1268, 694);
+            this.ClientSize = new System.Drawing.Size(1266, 694);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Employee Manager";
+            this.Text = "e";
             this.Load += new System.EventHandler(this.Employee_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -542,5 +559,6 @@
         private System.Windows.Forms.PictureBox reloadDataGirdViews;
         private System.Windows.Forms.Button idEmp;
         private MaterialSkin.Controls.MaterialButton saveOrUpdateEmp;
+        private System.Windows.Forms.Button close;
     }
 }

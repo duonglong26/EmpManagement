@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 
 namespace EmpManagement
 {
@@ -7,6 +8,10 @@ namespace EmpManagement
         public static String NO_OPTION = "--No Option--";
         public static String ID_EMPLOYEE_DEFAULT = "ID";
 
+        /*
+            Connection to SQL Server
+         */
+        public static SqlConnection connectionSqlServer = new SqlConnection(@"Data Source=LAPTOP-6E8C1ESV\SQLEXPRESS;Initial Catalog=MyEmployeeDb;Integrated Security=True");
 
         public static String getQueryInsertEmp(String code, String name, String address, String position,
             String gender, String date_of_birth, String phone, String education)
@@ -15,6 +20,7 @@ namespace EmpManagement
                 "values ('" + code + "','" + name + "','" + address + "','" + position + "','" + gender + "','" +
                 date_of_birth + "','" + phone + "','" + education + "')";
         }
+
         public static String getQueryUpdateEmpById(String id, String code, String name, String address, String position,
             String gender, String date_of_birth, String phone, String education)
         {
@@ -36,9 +42,47 @@ namespace EmpManagement
             return "update Employee set active = 0 where id = " + id;
         }
 
-        public static String getQueryCheckExitsCode(String code)
+        public static String getQueryCheckExistCodeEmp(String code)
         {
             return "select count(*) from Employee where code = '" + code + "' and active != 0";
+        }
+
+        public static String getQuerySearchEmp(String code, String name, String address, String position, String gender)
+        {
+            String query = "select ROW_NUMBER() OVER(ORDER BY id ASC) AS 'Order Number' ,id as 'Id', code as 'Code', name as 'Full Name', address as 'Address'" +
+                ", position as 'Position', gender as 'Gender', date_of_birth as 'Date Of Birth', phone as 'Phone'" +
+                ", education as 'Education' from Employee where active != 0";
+            if (code != "")
+            {
+                query += " and code like '" + code + "'";
+            }
+            if (name != "")
+            {
+                query += " and name like '" + name + "'";
+            }
+            if (address != "")
+            {
+                query += " and address like '" + address + "'";
+            }
+            if (position != "")
+            {
+                query += " and position like '" + position + "'";
+            }
+            if (gender != "")
+            {
+                query += " and gender like '" + gender + "'";
+            }
+            return query;
+        }
+
+        public static String getQueryCheckExistUsernameAccount(String username)
+        {
+            return "select count(*) from Account where username = '" + username + "'"; 
+        }
+
+        public static String getQueryInsertAccount(String username, String password)
+        {
+            return "insert into Account (username, password) values ('" + username + "', '" + password + "')";
         }
     }
 }

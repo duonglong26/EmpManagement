@@ -42,13 +42,24 @@ namespace EmpManagement
 
         private void openFormSearchEmp_Click(object sender, EventArgs e)
         {
-
+            handleOpenFormSearchEmp();
         }
 
         private void pictureOpenFormSearchEmp_Click(object sender, EventArgs e)
         {
-
+            handleOpenFormSearchEmp();
         }
 
+        private void handleOpenFormSearchEmp()
+        {
+            FilterEmployee filterEmp = new FilterEmployee();
+            filterEmp.Show();
+            this.Hide();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
