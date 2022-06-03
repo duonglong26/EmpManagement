@@ -90,8 +90,9 @@ namespace EmpManagement
 
         private void handleShowFormPassword()
         {
-            FormChangePassword formChangePassword = new FormChangePassword();
-            formChangePassword.Show();
+            //FormChangePassword formChangePassword = new FormChangePassword();
+            //formChangePassword.Show();
+            FormChangePassword.getInstance().Show();
             this.Hide();
         }
     }

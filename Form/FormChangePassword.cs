@@ -17,6 +17,25 @@ namespace EmpManagement
             InitializeComponent();
         }
 
+        private static FormChangePassword instance;
+
+        private static readonly object lockObject = new object();
+
+        public static FormChangePassword getInstance()
+        {
+            if (instance == null)
+            {
+                lock (lockObject)
+                {
+                    if (instance == null)
+                    {
+                        instance = new FormChangePassword();
+                    }
+                }
+            }
+            return instance;
+        }
+
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -98,8 +117,9 @@ namespace EmpManagement
 
         private void handleGoToHome()
         {
-            Home home = new Home();
-            home.Show();
+            //Home home = new Home();
+            //home.Show();
+            Home.getInstance().Show();
             this.Close();
         }
     }
