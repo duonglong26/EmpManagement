@@ -101,5 +101,21 @@ namespace EmpManagement
         {
             return "update Account set password = '" + newPassword + "' where username = '" + Session.sessionUsername + "'";
         }
+         
+        public static String getQueryInsertOtpTransaction(int otp, DateTime expireTime, String username)
+        {
+            return "insert into otp_transaction (otp, expire_time, username) values ('" + otp + "','" + expireTime + "','" + username + "')";
+        }
+        public static String getQueryDisableOtpTransaction(String username)
+        {
+            return "update otp_transaction set disable = 1 where username = '" + username + "'";
+        }
+
+        public static String getQueryCheckOtp(String otp, String username)
+        {
+            return "select count(*) from otp_transaction as e where " +
+                " expire_time > (GETDATE()) and otp = '" + otp + "' and username = '" + username +
+                "' and (e.disable is null or e.disable = 0)";
+        }
     }
 }

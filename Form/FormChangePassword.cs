@@ -33,6 +33,7 @@ namespace EmpManagement
                     }
                 }
             }
+            instance.resetForm();
             return instance;
         }
 
@@ -83,7 +84,7 @@ namespace EmpManagement
 
                                 conn.Close();
 
-                                handleGoToHome();
+                                handleGoToLogin();
 
                                 return;
                             }
@@ -117,15 +118,31 @@ namespace EmpManagement
 
         private void handleGoToHome()
         {
-            //Home home = new Home();
-            //home.Show();
-            Home.getInstance().Show();
+            FormHome.getInstance().Show();
             this.Close();
+        }
+
+        private void handleGoToLogin()
+        {
+            FormLogin.getInstance().Show();
+            this.Hide();
         }
 
         private void txtConfirmPassword_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FormChangePassword_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resetForm()
+        {
+            txtOldPassword.Text = "";
+            txtNewPassword.Text = "";
+            txtConfirmPassword.Text = "";
         }
     }
 }

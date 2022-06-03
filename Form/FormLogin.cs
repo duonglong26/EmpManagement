@@ -6,22 +6,22 @@ using System.Windows.Forms;
 
 namespace EmpManagement
 {
-    public partial class Login : Form
+    public partial class FormLogin : Form
     {
         /*
             Connection to SQL Server
          */
         SqlConnection conn = Utils.connectionSqlServer;
-        public Login()
+        public FormLogin()
         {
             InitializeComponent();
         }
 
-        private static Login instance;
+        private static FormLogin instance;
 
         private static readonly object lockObject = new object();
 
-        public static Login getInstance()
+        public static FormLogin getInstance()
         {
             if (instance == null)
             {
@@ -29,10 +29,11 @@ namespace EmpManagement
                 {
                     if (instance == null)
                     {
-                        instance = new Login();
+                        instance = new FormLogin();
                     }
                 }
             }
+            instance.resetForm();
             return instance;
         }
 
@@ -68,9 +69,7 @@ namespace EmpManagement
                     {
                         Session.sessionUsername = txtUsername.Text.Trim();
                         MessageBox.Show("Login success");
-                        //Home home = new Home();
-                        //home.Show();
-                        Home.getInstance().Show();
+                        FormHome.getInstance().Show();
                         this.Hide();
                     }
                 }
@@ -92,9 +91,7 @@ namespace EmpManagement
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            //SignUp signUp = new SignUp();
-            //signUp.Show();
-            SignUp.getInstance().Show();
+            FormSignUp.getInstance().Show();
             this.Hide();
         }
 
@@ -105,7 +102,19 @@ namespace EmpManagement
 
         private void txtUsername_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void forgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormForgotPassword.getInstance().Show();
+            this.Hide();
+        }
+
+        private void resetForm()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
         }
     }
 }

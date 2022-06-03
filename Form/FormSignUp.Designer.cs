@@ -1,6 +1,6 @@
 ﻿namespace EmpManagement
 {
-    partial class SignUp
+    partial class FormSignUp
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSignUp));
             this.close = new System.Windows.Forms.Button();
             this.txtUsername = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.txtPassword = new MaterialSkin.Controls.MaterialMaskedTextBox();
@@ -43,7 +43,7 @@
             this.close.BackColor = System.Drawing.Color.White;
             this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.close.Location = new System.Drawing.Point(342, -2);
+            this.close.Location = new System.Drawing.Point(344, -2);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(30, 30);
             this.close.TabIndex = 10;

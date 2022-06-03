@@ -1,6 +1,6 @@
 ﻿namespace EmpManagement
 {
-    partial class Login
+    partial class FormLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -39,6 +39,8 @@
             this.btnLogin = new MaterialSkin.Controls.MaterialButton();
             this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
             this.close = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.forgotPassword = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,7 +196,7 @@
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(256, 197);
+            this.btnSignUp.Location = new System.Drawing.Point(249, 197);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
@@ -221,11 +223,34 @@
             this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(275, 220);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(0, 13);
+            this.linkLabel1.TabIndex = 10;
+            // 
+            // forgotPassword
+            // 
+            this.forgotPassword.AutoSize = true;
+            this.forgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.forgotPassword.Location = new System.Drawing.Point(162, 261);
+            this.forgotPassword.Name = "forgotPassword";
+            this.forgotPassword.Size = new System.Drawing.Size(136, 16);
+            this.forgotPassword.TabIndex = 11;
+            this.forgotPassword.TabStop = true;
+            this.forgotPassword.Text = "Forgot Password ?";
+            this.forgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotPassword_LinkClicked);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 272);
+            this.ClientSize = new System.Drawing.Size(480, 334);
+            this.Controls.Add(this.forgotPassword);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.close);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);
@@ -233,6 +258,7 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -255,5 +281,7 @@
         private MaterialSkin.Controls.MaterialButton btnLogin;
         private MaterialSkin.Controls.MaterialButton btnSignUp;
         private System.Windows.Forms.Button close;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel forgotPassword;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace EmpManagement
 {
-    partial class FilterEmployee
+    partial class FormFilterEmployee
     {
         /// <summary>
         /// Required designer variable.

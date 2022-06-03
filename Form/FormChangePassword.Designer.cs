@@ -67,7 +67,7 @@
             this.txtOldPassword.Hint = "Old Password";
             this.txtOldPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtOldPassword.LeadingIcon = null;
-            this.txtOldPassword.Location = new System.Drawing.Point(123, 61);
+            this.txtOldPassword.Location = new System.Drawing.Point(131, 74);
             this.txtOldPassword.Mask = "";
             this.txtOldPassword.MaxLength = 32767;
             this.txtOldPassword.MouseState = MaterialSkin.MouseState.OUT;
@@ -84,7 +84,7 @@
             this.txtOldPassword.SelectionLength = 0;
             this.txtOldPassword.SelectionStart = 0;
             this.txtOldPassword.ShortcutsEnabled = true;
-            this.txtOldPassword.Size = new System.Drawing.Size(315, 48);
+            this.txtOldPassword.Size = new System.Drawing.Size(323, 48);
             this.txtOldPassword.SkipLiterals = true;
             this.txtOldPassword.TabIndex = 12;
             this.txtOldPassword.TabStop = false;
@@ -111,7 +111,7 @@
             this.txtNewPassword.Hint = "New Password";
             this.txtNewPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtNewPassword.LeadingIcon = null;
-            this.txtNewPassword.Location = new System.Drawing.Point(123, 129);
+            this.txtNewPassword.Location = new System.Drawing.Point(131, 128);
             this.txtNewPassword.Mask = "";
             this.txtNewPassword.MaxLength = 32767;
             this.txtNewPassword.MouseState = MaterialSkin.MouseState.OUT;
@@ -128,7 +128,7 @@
             this.txtNewPassword.SelectionLength = 0;
             this.txtNewPassword.SelectionStart = 0;
             this.txtNewPassword.ShortcutsEnabled = true;
-            this.txtNewPassword.Size = new System.Drawing.Size(315, 48);
+            this.txtNewPassword.Size = new System.Drawing.Size(323, 48);
             this.txtNewPassword.SkipLiterals = true;
             this.txtNewPassword.TabIndex = 13;
             this.txtNewPassword.TabStop = false;
@@ -154,7 +154,7 @@
             this.txtConfirmPassword.Hint = "Confirm New Password";
             this.txtConfirmPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtConfirmPassword.LeadingIcon = null;
-            this.txtConfirmPassword.Location = new System.Drawing.Point(123, 192);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(131, 182);
             this.txtConfirmPassword.Mask = "";
             this.txtConfirmPassword.MaxLength = 32767;
             this.txtConfirmPassword.MouseState = MaterialSkin.MouseState.OUT;
@@ -171,7 +171,7 @@
             this.txtConfirmPassword.SelectionLength = 0;
             this.txtConfirmPassword.SelectionStart = 0;
             this.txtConfirmPassword.ShortcutsEnabled = true;
-            this.txtConfirmPassword.Size = new System.Drawing.Size(315, 48);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(323, 48);
             this.txtConfirmPassword.SkipLiterals = true;
             this.txtConfirmPassword.TabIndex = 14;
             this.txtConfirmPassword.TabStop = false;
@@ -190,7 +190,7 @@
             this.btnSavePassword.Depth = 0;
             this.btnSavePassword.HighEmphasis = true;
             this.btnSavePassword.Icon = null;
-            this.btnSavePassword.Location = new System.Drawing.Point(228, 262);
+            this.btnSavePassword.Location = new System.Drawing.Point(260, 239);
             this.btnSavePassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSavePassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSavePassword.Name = "btnSavePassword";
@@ -251,6 +251,7 @@
             this.Name = "FormChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormChangePassword";
+            this.Load += new System.EventHandler(this.FormChangePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

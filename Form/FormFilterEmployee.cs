@@ -5,22 +5,22 @@ using System.Windows.Forms;
 
 namespace EmpManagement
 {
-    public partial class FilterEmployee : Form
+    public partial class FormFilterEmployee : Form
     {
         /*
             Connection to SQL Server
          */
         SqlConnection conn = Utils.connectionSqlServer;
-        public FilterEmployee()
+        public FormFilterEmployee()
         {
             InitializeComponent();
         }
 
-        private static FilterEmployee instance;
+        private static FormFilterEmployee instance;
 
         private static readonly object lockObject = new object();
 
-        public static FilterEmployee getInstance()
+        public static FormFilterEmployee getInstance()
         {
             if (instance == null)
             {
@@ -28,10 +28,11 @@ namespace EmpManagement
                 {
                     if (instance == null)
                     {
-                        instance = new FilterEmployee();
+                        instance = new FormFilterEmployee();
                     }
                 }
             }
+            instance.resetForm();
             return instance;
         }
 
@@ -87,15 +88,22 @@ namespace EmpManagement
 
         private void btnGoToHome_Click(object sender, EventArgs e)
         {
-            //Home home = new Home();
-            //home.Show();
-            Home.getInstance().Show();
+            FormHome.getInstance().Show();
             this.Hide();
         }
 
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void resetForm()
+        {
+            cbbEmpGender.SelectedIndex = 0;
+            cbbEmpPosition.SelectedIndex = 0;
+            txtEmpCode.Text = "";
+            txtEmpName.Text = "";
+            txtEmpAddress.Text = "";
         }
     }
 }

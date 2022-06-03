@@ -142,6 +142,7 @@
       <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -155,61 +156,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\FormConfirmOTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormConfirmOTP.Designer.cs">
+      <DependentUpon>FormConfirmOTP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enity\Account.cs" />
     <Compile Include="Enity\Session.cs" />
+    <Compile Include="Form\FormForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormForgotPassword.Designer.cs">
+      <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\FormChangePassword.Designer.cs">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\FilterEmployee.cs">
+    <Compile Include="Form\FormFilterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FilterEmployee.Designer.cs">
-      <DependentUpon>FilterEmployee.cs</DependentUpon>
+    <Compile Include="Form\FormFilterEmployee.Designer.cs">
+      <DependentUpon>FormFilterEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Employee.cs">
+    <Compile Include="Form\FormEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <Compile Include="Form\FormEmployee.Designer.cs">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Home.cs">
+    <Compile Include="Form\FormHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Form\FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form\Login.cs">
+    <Compile Include="Form\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Form\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Form\SignUp.cs">
+    <Compile Include="Form\FormSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <Compile Include="Form\FormSignUp.Designer.cs">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils.cs" />
-    <EmbeddedResource Include="Form\FilterEmployee.resx">
-      <DependentUpon>FilterEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormConfirmOTP.resx">
+      <DependentUpon>FormConfirmOTP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormForgotPassword.resx">
+      <DependentUpon>FormForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormFilterEmployee.resx">
+      <DependentUpon>FormFilterEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormEmployee.resx">
+      <DependentUpon>FormEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,8 +239,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form\SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
+    <EmbeddedResource Include="Form\FormSignUp.resx">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

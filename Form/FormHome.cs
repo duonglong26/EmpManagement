@@ -4,18 +4,18 @@ using System.Windows.Forms;
 
 namespace EmpManagement
 {
-    public partial class Home : Form
+    public partial class FormHome : Form
     {
-        public Home()
+        public FormHome()
         {
             InitializeComponent();
         }
 
-        private static Home instance;
+        private static FormHome instance;
 
         private static readonly object lockObject = new object();
 
-        public static Home getInstance()
+        public static FormHome getInstance()
         {
             if (instance == null)
             {
@@ -23,7 +23,7 @@ namespace EmpManagement
                 {
                     if (instance == null)
                     {
-                        instance = new Home();
+                        instance = new FormHome();
                     }
                 }
             }
@@ -44,7 +44,7 @@ namespace EmpManagement
         {
             //Employee employee = new Employee();
             //employee.Show();
-            Employee.getInstance().Show();
+            FormEmployee.getInstance().Show();
             this.Hide();
         }
 
@@ -53,7 +53,7 @@ namespace EmpManagement
             Session.sessionUsername = null;
             //Login login = new Login();
             //login.Show();
-            Login.getInstance().Show();
+            FormLogin.getInstance().Show();
             this.Hide();
         }
 
@@ -71,7 +71,7 @@ namespace EmpManagement
         {
             //FilterEmployee filterEmp = new FilterEmployee();
             //filterEmp.Show();
-            FilterEmployee.getInstance().Show();
+            FormFilterEmployee.getInstance().Show();
             this.Hide();
         }
 

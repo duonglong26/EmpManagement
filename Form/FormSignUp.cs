@@ -1,25 +1,26 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.ComponentModel.DataAnnotations;
 
 namespace EmpManagement
 {
-    public partial class SignUp : Form
+    public partial class FormSignUp : Form
     {
         /*
             Connection to SQL Server
          */
         SqlConnection conn = Utils.connectionSqlServer;
-        public SignUp()
+        public FormSignUp()
         {
             InitializeComponent();
         }
 
-        private static SignUp instance;
+        private static FormSignUp instance;
 
         private static readonly object lockObject = new object();
 
-        public static SignUp getInstance()
+        public static FormSignUp getInstance()
         {
             if (instance == null)
             {
@@ -27,10 +28,11 @@ namespace EmpManagement
                 {
                     if (instance == null)
                     {
-                        instance = new SignUp();
+                        instance = new FormSignUp();
                     }
                 }
             }
+            instance.resetForm();
             return instance;
         }
 
@@ -44,6 +46,10 @@ namespace EmpManagement
             if (isExistUsername())
             {
                 MessageBox.Show("Username is already exist!");
+                return;
+            } else if (!isValidEmail(txtUsername.Text.Trim()))
+            {
+                MessageBox.Show("Username require is a email!");
                 return;
             }
             if (txtUsername.Text.Trim() == "" || txtPassword.Text.Trim() == "")
@@ -101,10 +107,20 @@ namespace EmpManagement
 
         private void handleBackToLogin()
         {
-            //Login login = new Login();
-            //login.Show();
-            Login.getInstance().Show();
+            resetForm();
+            FormLogin.getInstance().Show();
             this.Hide();
+        }
+
+        private bool isValidEmail(String username)
+        {
+            return new EmailAddressAttribute().IsValid(username);
+        }
+
+        private void resetForm()
+        {
+            txtUsername.Text = "";
+            txtPassword.Text = "";
         }
 
     }

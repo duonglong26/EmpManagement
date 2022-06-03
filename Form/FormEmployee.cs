@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace EmpManagement
 {
-    public partial class Employee : Form
+    public partial class FormEmployee : Form
     {
 
         /*
@@ -13,16 +13,16 @@ namespace EmpManagement
          */
         SqlConnection conn = Utils.connectionSqlServer;
 
-        public Employee()
+        public FormEmployee()
         {
             InitializeComponent();
         }
 
-        private static Employee instance;
+        private static FormEmployee instance;
 
         private static readonly object lockObject = new object();
 
-        public static Employee getInstance()
+        public static FormEmployee getInstance()
         {
             if (instance == null)
             {
@@ -30,10 +30,11 @@ namespace EmpManagement
                 {
                     if (instance == null)
                     {
-                        instance = new Employee();
+                        instance = new FormEmployee();
                     }
                 }
             }
+            instance.resetFormInput();
             return instance;
         }
 
@@ -218,9 +219,7 @@ namespace EmpManagement
 
         private void btnGoToHome_Click(object sender, EventArgs e)
         {
-            //Home home = new Home();
-            //home.Show();
-            Home.getInstance().Show();
+            FormHome.getInstance().Show();
             this.Hide();
         }
 
