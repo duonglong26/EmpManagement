@@ -42,13 +42,14 @@
             // 
             // searchEmp
             // 
+            this.searchEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.searchEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.searchEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.searchEmp.Depth = 0;
             this.searchEmp.HighEmphasis = true;
             this.searchEmp.Icon = null;
-            this.searchEmp.Location = new System.Drawing.Point(58, 365);
+            this.searchEmp.Location = new System.Drawing.Point(73, 365);
             this.searchEmp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.searchEmp.MouseState = MaterialSkin.MouseState.HOVER;
             this.searchEmp.Name = "searchEmp";
@@ -64,6 +65,7 @@
             // txtEmpCode
             // 
             this.txtEmpCode.AllowPromptAsInput = true;
+            this.txtEmpCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEmpCode.AnimateReadOnly = false;
             this.txtEmpCode.AsciiOnly = false;
             this.txtEmpCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -76,7 +78,7 @@
             this.txtEmpCode.Hint = "Code";
             this.txtEmpCode.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtEmpCode.LeadingIcon = null;
-            this.txtEmpCode.Location = new System.Drawing.Point(27, 37);
+            this.txtEmpCode.Location = new System.Drawing.Point(42, 37);
             this.txtEmpCode.Mask = "";
             this.txtEmpCode.MaxLength = 32767;
             this.txtEmpCode.MouseState = MaterialSkin.MouseState.OUT;
@@ -106,6 +108,7 @@
             // txtEmpName
             // 
             this.txtEmpName.AllowPromptAsInput = true;
+            this.txtEmpName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEmpName.AnimateReadOnly = false;
             this.txtEmpName.AsciiOnly = false;
             this.txtEmpName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -118,7 +121,7 @@
             this.txtEmpName.Hint = "Name";
             this.txtEmpName.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtEmpName.LeadingIcon = null;
-            this.txtEmpName.Location = new System.Drawing.Point(27, 91);
+            this.txtEmpName.Location = new System.Drawing.Point(42, 91);
             this.txtEmpName.Mask = "";
             this.txtEmpName.MaxLength = 32767;
             this.txtEmpName.MouseState = MaterialSkin.MouseState.OUT;
@@ -148,6 +151,7 @@
             // txtEmpAddress
             // 
             this.txtEmpAddress.AllowPromptAsInput = true;
+            this.txtEmpAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEmpAddress.AnimateReadOnly = false;
             this.txtEmpAddress.AsciiOnly = false;
             this.txtEmpAddress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -160,7 +164,7 @@
             this.txtEmpAddress.Hint = "Address";
             this.txtEmpAddress.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtEmpAddress.LeadingIcon = null;
-            this.txtEmpAddress.Location = new System.Drawing.Point(27, 145);
+            this.txtEmpAddress.Location = new System.Drawing.Point(42, 145);
             this.txtEmpAddress.Mask = "";
             this.txtEmpAddress.MaxLength = 32767;
             this.txtEmpAddress.MouseState = MaterialSkin.MouseState.OUT;
@@ -189,16 +193,18 @@
             // 
             // dataGridViewEmps
             // 
+            this.dataGridViewEmps.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dataGridViewEmps.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewEmps.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEmps.Location = new System.Drawing.Point(351, 37);
+            this.dataGridViewEmps.Location = new System.Drawing.Point(366, 37);
             this.dataGridViewEmps.Name = "dataGridViewEmps";
-            this.dataGridViewEmps.Size = new System.Drawing.Size(873, 364);
+            this.dataGridViewEmps.Size = new System.Drawing.Size(873, 442);
             this.dataGridViewEmps.TabIndex = 6;
             this.dataGridViewEmps.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewEmps_CellContentClick);
             // 
             // cbbEmpPosition
             // 
+            this.cbbEmpPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbbEmpPosition.AutoResize = false;
             this.cbbEmpPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbbEmpPosition.Depth = 0;
@@ -221,7 +227,7 @@
             "Junior Developer",
             "Tester",
             "BA"});
-            this.cbbEmpPosition.Location = new System.Drawing.Point(27, 199);
+            this.cbbEmpPosition.Location = new System.Drawing.Point(42, 199);
             this.cbbEmpPosition.MaxDropDownItems = 4;
             this.cbbEmpPosition.MouseState = MaterialSkin.MouseState.OUT;
             this.cbbEmpPosition.Name = "cbbEmpPosition";
@@ -231,6 +237,7 @@
             // 
             // cbbEmpGender
             // 
+            this.cbbEmpGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbbEmpGender.AutoResize = false;
             this.cbbEmpGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbbEmpGender.Depth = 0;
@@ -248,7 +255,7 @@
             "",
             "Male",
             "Female"});
-            this.cbbEmpGender.Location = new System.Drawing.Point(27, 254);
+            this.cbbEmpGender.Location = new System.Drawing.Point(42, 254);
             this.cbbEmpGender.MaxDropDownItems = 4;
             this.cbbEmpGender.MouseState = MaterialSkin.MouseState.OUT;
             this.cbbEmpGender.Name = "cbbEmpGender";
@@ -258,13 +265,14 @@
             // 
             // btnGoToHome
             // 
+            this.btnGoToHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnGoToHome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnGoToHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGoToHome.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnGoToHome.Depth = 0;
             this.btnGoToHome.HighEmphasis = true;
             this.btnGoToHome.Icon = null;
-            this.btnGoToHome.Location = new System.Drawing.Point(160, 365);
+            this.btnGoToHome.Location = new System.Drawing.Point(175, 365);
             this.btnGoToHome.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnGoToHome.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGoToHome.Name = "btnGoToHome";
@@ -280,10 +288,11 @@
             // 
             // close
             // 
+            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.close.BackColor = System.Drawing.Color.White;
             this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.close.Location = new System.Drawing.Point(1229, -1);
+            this.close.Location = new System.Drawing.Point(1260, -1);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(30, 30);
             this.close.TabIndex = 10;
@@ -295,7 +304,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 454);
+            this.ClientSize = new System.Drawing.Size(1289, 532);
             this.Controls.Add(this.close);
             this.Controls.Add(this.btnGoToHome);
             this.Controls.Add(this.cbbEmpGender);

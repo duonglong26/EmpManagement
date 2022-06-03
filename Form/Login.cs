@@ -17,6 +17,25 @@ namespace EmpManagement
             InitializeComponent();
         }
 
+        private static Login instance;
+
+        private static readonly object lockObject = new object();
+
+        public static Login getInstance()
+        {
+            if (instance == null)
+            {
+                lock (lockObject)
+                {
+                    if (instance == null)
+                    {
+                        instance = new Login();
+                    }
+                }
+            }
+            return instance;
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -73,14 +92,20 @@ namespace EmpManagement
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            SignUp signUp = new SignUp();
-            signUp.Show();
+            //SignUp signUp = new SignUp();
+            //signUp.Show();
+            SignUp.getInstance().Show();
             this.Hide();
         }
 
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtUsername_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

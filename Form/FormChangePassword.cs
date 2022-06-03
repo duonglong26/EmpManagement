@@ -122,5 +122,10 @@ namespace EmpManagement
             Home.getInstance().Show();
             this.Close();
         }
+
+        private void txtConfirmPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

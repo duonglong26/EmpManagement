@@ -16,6 +16,25 @@ namespace EmpManagement
             InitializeComponent();
         }
 
+        private static FilterEmployee instance;
+
+        private static readonly object lockObject = new object();
+
+        public static FilterEmployee getInstance()
+        {
+            if (instance == null)
+            {
+                lock (lockObject)
+                {
+                    if (instance == null)
+                    {
+                        instance = new FilterEmployee();
+                    }
+                }
+            }
+            return instance;
+        }
+
         private void btnSearchEmp_Click(object sender, EventArgs e)
         {
             try

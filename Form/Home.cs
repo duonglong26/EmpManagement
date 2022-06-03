@@ -51,8 +51,9 @@ namespace EmpManagement
         private void openFormLogin_Click(object sender, EventArgs e)
         {
             Session.sessionUsername = null;
-            Login login = new Login();
-            login.Show();
+            //Login login = new Login();
+            //login.Show();
+            Login.getInstance().Show();
             this.Hide();
         }
 
@@ -68,8 +69,9 @@ namespace EmpManagement
 
         private void handleOpenFormSearchEmp()
         {
-            FilterEmployee filterEmp = new FilterEmployee();
-            filterEmp.Show();
+            //FilterEmployee filterEmp = new FilterEmployee();
+            //filterEmp.Show();
+            FilterEmployee.getInstance().Show();
             this.Hide();
         }
 

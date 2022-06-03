@@ -32,6 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbChangePassword = new System.Windows.Forms.Label();
+            this.pictureChangePassword = new System.Windows.Forms.PictureBox();
             this.openFormSearchEmp = new System.Windows.Forms.Label();
             this.labelOpenEmployee = new System.Windows.Forms.Label();
             this.pictureOpenFormSearchEmp = new System.Windows.Forms.PictureBox();
@@ -39,13 +41,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.openFormLogin = new MaterialSkin.Controls.MaterialButton();
             this.close = new System.Windows.Forms.Button();
-            this.pictureChangePassword = new System.Windows.Forms.PictureBox();
-            this.lbChangePassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOpenFormSearchEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOpenEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePassword)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -71,6 +71,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lbChangePassword);
             this.panel1.Controls.Add(this.pictureChangePassword);
@@ -79,18 +80,46 @@
             this.panel1.Controls.Add(this.pictureOpenFormSearchEmp);
             this.panel1.Controls.Add(this.pictureOpenEmployee);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(-1, 87);
+            this.panel1.Location = new System.Drawing.Point(-4, 87);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 265);
+            this.panel1.Size = new System.Drawing.Size(746, 257);
             this.panel1.TabIndex = 3;
+            // 
+            // lbChangePassword
+            // 
+            this.lbChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lbChangePassword.AutoSize = true;
+            this.lbChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChangePassword.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbChangePassword.Location = new System.Drawing.Point(467, 193);
+            this.lbChangePassword.Name = "lbChangePassword";
+            this.lbChangePassword.Size = new System.Drawing.Size(164, 24);
+            this.lbChangePassword.TabIndex = 12;
+            this.lbChangePassword.Text = "Change Password";
+            this.lbChangePassword.Click += new System.EventHandler(this.lbChangePassword_Click);
+            // 
+            // pictureChangePassword
+            // 
+            this.pictureChangePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.pictureChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("pictureChangePassword.Image")));
+            this.pictureChangePassword.Location = new System.Drawing.Point(504, 66);
+            this.pictureChangePassword.Name = "pictureChangePassword";
+            this.pictureChangePassword.Size = new System.Drawing.Size(99, 116);
+            this.pictureChangePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureChangePassword.TabIndex = 11;
+            this.pictureChangePassword.TabStop = false;
+            this.pictureChangePassword.Click += new System.EventHandler(this.pictureChangePassword_Click);
             // 
             // openFormSearchEmp
             // 
+            this.openFormSearchEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.openFormSearchEmp.AutoSize = true;
             this.openFormSearchEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openFormSearchEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.openFormSearchEmp.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.openFormSearchEmp.Location = new System.Drawing.Point(356, 193);
+            this.openFormSearchEmp.Location = new System.Drawing.Point(329, 193);
             this.openFormSearchEmp.Name = "openFormSearchEmp";
             this.openFormSearchEmp.Size = new System.Drawing.Size(70, 24);
             this.openFormSearchEmp.TabIndex = 10;
@@ -99,11 +128,12 @@
             // 
             // labelOpenEmployee
             // 
+            this.labelOpenEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.labelOpenEmployee.AutoSize = true;
             this.labelOpenEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelOpenEmployee.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOpenEmployee.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.labelOpenEmployee.Location = new System.Drawing.Point(180, 193);
+            this.labelOpenEmployee.Location = new System.Drawing.Point(153, 193);
             this.labelOpenEmployee.Name = "labelOpenEmployee";
             this.labelOpenEmployee.Size = new System.Drawing.Size(96, 24);
             this.labelOpenEmployee.TabIndex = 9;
@@ -112,11 +142,12 @@
             // 
             // pictureOpenFormSearchEmp
             // 
+            this.pictureOpenFormSearchEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureOpenFormSearchEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureOpenFormSearchEmp.Image = ((System.Drawing.Image)(resources.GetObject("pictureOpenFormSearchEmp.Image")));
-            this.pictureOpenFormSearchEmp.Location = new System.Drawing.Point(340, 66);
+            this.pictureOpenFormSearchEmp.Location = new System.Drawing.Point(313, 66);
             this.pictureOpenFormSearchEmp.Name = "pictureOpenFormSearchEmp";
-            this.pictureOpenFormSearchEmp.Size = new System.Drawing.Size(99, 124);
+            this.pictureOpenFormSearchEmp.Size = new System.Drawing.Size(99, 116);
             this.pictureOpenFormSearchEmp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureOpenFormSearchEmp.TabIndex = 7;
             this.pictureOpenFormSearchEmp.TabStop = false;
@@ -124,11 +155,12 @@
             // 
             // pictureOpenEmployee
             // 
+            this.pictureOpenEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.pictureOpenEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureOpenEmployee.Image = ((System.Drawing.Image)(resources.GetObject("pictureOpenEmployee.Image")));
-            this.pictureOpenEmployee.Location = new System.Drawing.Point(177, 66);
+            this.pictureOpenEmployee.Location = new System.Drawing.Point(150, 66);
             this.pictureOpenEmployee.Name = "pictureOpenEmployee";
-            this.pictureOpenEmployee.Size = new System.Drawing.Size(99, 124);
+            this.pictureOpenEmployee.Size = new System.Drawing.Size(99, 116);
             this.pictureOpenEmployee.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureOpenEmployee.TabIndex = 6;
             this.pictureOpenEmployee.TabStop = false;
@@ -136,10 +168,11 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label2.Location = new System.Drawing.Point(355, 20);
+            this.label2.Location = new System.Drawing.Point(328, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 25);
             this.label2.TabIndex = 5;
@@ -147,13 +180,14 @@
             // 
             // openFormLogin
             // 
+            this.openFormLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.openFormLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.openFormLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.openFormLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.openFormLogin.Depth = 0;
             this.openFormLogin.HighEmphasis = true;
             this.openFormLogin.Icon = null;
-            this.openFormLogin.Location = new System.Drawing.Point(709, 384);
+            this.openFormLogin.Location = new System.Drawing.Point(651, 373);
             this.openFormLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.openFormLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.openFormLogin.Name = "openFormLogin";
@@ -168,10 +202,11 @@
             // 
             // close
             // 
+            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.close.BackColor = System.Drawing.Color.White;
             this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.close.Location = new System.Drawing.Point(770, 0);
+            this.close.Location = new System.Drawing.Point(712, 0);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(30, 30);
             this.close.TabIndex = 5;
@@ -179,37 +214,12 @@
             this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // pictureChangePassword
-            // 
-            this.pictureChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("pictureChangePassword.Image")));
-            this.pictureChangePassword.Location = new System.Drawing.Point(531, 66);
-            this.pictureChangePassword.Name = "pictureChangePassword";
-            this.pictureChangePassword.Size = new System.Drawing.Size(99, 124);
-            this.pictureChangePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureChangePassword.TabIndex = 11;
-            this.pictureChangePassword.TabStop = false;
-            this.pictureChangePassword.Click += new System.EventHandler(this.pictureChangePassword_Click);
-            // 
-            // lbChangePassword
-            // 
-            this.lbChangePassword.AutoSize = true;
-            this.lbChangePassword.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbChangePassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChangePassword.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lbChangePassword.Location = new System.Drawing.Point(494, 193);
-            this.lbChangePassword.Name = "lbChangePassword";
-            this.lbChangePassword.Size = new System.Drawing.Size(164, 24);
-            this.lbChangePassword.TabIndex = 12;
-            this.lbChangePassword.Text = "Change Password";
-            this.lbChangePassword.Click += new System.EventHandler(this.lbChangePassword_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(799, 450);
+            this.ClientSize = new System.Drawing.Size(741, 439);
             this.Controls.Add(this.close);
             this.Controls.Add(this.openFormLogin);
             this.Controls.Add(this.panel1);
@@ -222,9 +232,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOpenFormSearchEmp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureOpenEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureChangePassword)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

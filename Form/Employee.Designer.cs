@@ -69,6 +69,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.saveOrUpdateEmp);
             this.panel1.Controls.Add(this.idEmp);
@@ -93,6 +94,7 @@
             // 
             // saveOrUpdateEmp
             // 
+            this.saveOrUpdateEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.saveOrUpdateEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.saveOrUpdateEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveOrUpdateEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -114,6 +116,7 @@
             // 
             // idEmp
             // 
+            this.idEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.idEmp.BackColor = System.Drawing.Color.Black;
             this.idEmp.Cursor = System.Windows.Forms.Cursors.No;
             this.idEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,6 +130,7 @@
             // 
             // reloadDataGirdViews
             // 
+            this.reloadDataGirdViews.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.reloadDataGirdViews.Cursor = System.Windows.Forms.Cursors.Hand;
             this.reloadDataGirdViews.Image = ((System.Drawing.Image)(resources.GetObject("reloadDataGirdViews.Image")));
             this.reloadDataGirdViews.Location = new System.Drawing.Point(919, 3);
@@ -139,6 +143,7 @@
             // 
             // empDataGridViews
             // 
+            this.empDataGridViews.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.empDataGridViews.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.empDataGridViews.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.empDataGridViews.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -150,6 +155,7 @@
             // 
             // btnGoToHome
             // 
+            this.btnGoToHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnGoToHome.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnGoToHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGoToHome.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -171,6 +177,7 @@
             // 
             // btnDeleteEmp
             // 
+            this.btnDeleteEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnDeleteEmp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnDeleteEmp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteEmp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -192,6 +199,7 @@
             // 
             // cbbEmpGender
             // 
+            this.cbbEmpGender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbbEmpGender.AutoResize = false;
             this.cbbEmpGender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbbEmpGender.Depth = 0;
@@ -218,6 +226,7 @@
             // 
             // cbbEmpPosition
             // 
+            this.cbbEmpPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cbbEmpPosition.AutoResize = false;
             this.cbbEmpPosition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbbEmpPosition.Depth = 0;
@@ -249,6 +258,7 @@
             // 
             // materialLabel1
             // 
+            this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -261,6 +271,7 @@
             // 
             // empDateOfBirth
             // 
+            this.empDateOfBirth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.empDateOfBirth.Location = new System.Drawing.Point(157, 268);
             this.empDateOfBirth.Name = "empDateOfBirth";
             this.empDateOfBirth.Size = new System.Drawing.Size(390, 20);
@@ -270,6 +281,7 @@
             // txtEmpEducation
             // 
             this.txtEmpEducation.AllowPromptAsInput = true;
+            this.txtEmpEducation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEmpEducation.AnimateReadOnly = false;
             this.txtEmpEducation.AsciiOnly = false;
             this.txtEmpEducation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -313,6 +325,7 @@
             // txtEmpPhone
             // 
             this.txtEmpPhone.AllowPromptAsInput = true;
+            this.txtEmpPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEmpPhone.AnimateReadOnly = false;
             this.txtEmpPhone.AsciiOnly = false;
             this.txtEmpPhone.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -357,6 +370,7 @@
             // txtEmpAddress
             // 
             this.txtEmpAddress.AllowPromptAsInput = true;
+            this.txtEmpAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEmpAddress.AnimateReadOnly = false;
             this.txtEmpAddress.AsciiOnly = false;
             this.txtEmpAddress.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -400,6 +414,7 @@
             // txtEmpName
             // 
             this.txtEmpName.AllowPromptAsInput = true;
+            this.txtEmpName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEmpName.AnimateReadOnly = false;
             this.txtEmpName.AsciiOnly = false;
             this.txtEmpName.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -443,6 +458,7 @@
             // txtEmpCode
             // 
             this.txtEmpCode.AllowPromptAsInput = true;
+            this.txtEmpCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtEmpCode.AnimateReadOnly = false;
             this.txtEmpCode.AsciiOnly = false;
             this.txtEmpCode.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -502,6 +518,7 @@
             // 
             // close
             // 
+            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.close.BackColor = System.Drawing.Color.White;
             this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -518,7 +535,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1266, 694);
+            this.ClientSize = new System.Drawing.Size(1266, 696);
             this.Controls.Add(this.close);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);

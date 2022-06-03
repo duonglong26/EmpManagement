@@ -39,10 +39,11 @@
             // 
             // close
             // 
+            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.close.BackColor = System.Drawing.Color.White;
             this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.close.Location = new System.Drawing.Point(470, -2);
+            this.close.Location = new System.Drawing.Point(342, -2);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(30, 30);
             this.close.TabIndex = 10;
@@ -53,19 +54,20 @@
             // txtUsername
             // 
             this.txtUsername.AllowPromptAsInput = true;
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtUsername.AnimateReadOnly = false;
             this.txtUsername.AsciiOnly = false;
             this.txtUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtUsername.BeepOnError = false;
             this.txtUsername.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtUsername.Depth = 0;
-            this.txtUsername.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtUsername.HidePromptOnLeave = false;
             this.txtUsername.HideSelection = true;
             this.txtUsername.Hint = "Username";
             this.txtUsername.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtUsername.LeadingIcon = null;
-            this.txtUsername.Location = new System.Drawing.Point(136, 58);
+            this.txtUsername.Location = new System.Drawing.Point(69, 58);
             this.txtUsername.Mask = "";
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
@@ -82,7 +84,7 @@
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(250, 48);
+            this.txtUsername.Size = new System.Drawing.Size(243, 48);
             this.txtUsername.SkipLiterals = true;
             this.txtUsername.TabIndex = 11;
             this.txtUsername.TabStop = false;
@@ -95,6 +97,7 @@
             // txtPassword
             // 
             this.txtPassword.AllowPromptAsInput = true;
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtPassword.AnimateReadOnly = false;
             this.txtPassword.AsciiOnly = false;
             this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -107,7 +110,7 @@
             this.txtPassword.Hint = "Password";
             this.txtPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(136, 127);
+            this.txtPassword.Location = new System.Drawing.Point(69, 127);
             this.txtPassword.Mask = "";
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
@@ -124,7 +127,7 @@
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(250, 48);
+            this.txtPassword.Size = new System.Drawing.Size(243, 48);
             this.txtPassword.SkipLiterals = true;
             this.txtPassword.TabIndex = 12;
             this.txtPassword.TabStop = false;
@@ -137,13 +140,14 @@
             // 
             // btnSignUp
             // 
+            this.btnSignUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnSignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(217, 184);
+            this.btnSignUp.Location = new System.Drawing.Point(146, 184);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
@@ -172,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 260);
+            this.ClientSize = new System.Drawing.Size(372, 264);
             this.Controls.Add(this.backToLogin);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.txtPassword);

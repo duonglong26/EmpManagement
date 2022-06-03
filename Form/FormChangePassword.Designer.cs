@@ -54,16 +54,14 @@
             // txtOldPassword
             // 
             this.txtOldPassword.AllowPromptAsInput = true;
-            this.txtOldPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtOldPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtOldPassword.AnimateReadOnly = false;
             this.txtOldPassword.AsciiOnly = false;
             this.txtOldPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtOldPassword.BeepOnError = false;
             this.txtOldPassword.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
             this.txtOldPassword.Depth = 0;
-            this.txtOldPassword.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtOldPassword.HidePromptOnLeave = false;
             this.txtOldPassword.HideSelection = true;
             this.txtOldPassword.Hint = "Old Password";
@@ -100,9 +98,7 @@
             // txtNewPassword
             // 
             this.txtNewPassword.AllowPromptAsInput = true;
-            this.txtNewPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNewPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNewPassword.AnimateReadOnly = false;
             this.txtNewPassword.AsciiOnly = false;
             this.txtNewPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -145,9 +141,7 @@
             // txtConfirmPassword
             // 
             this.txtConfirmPassword.AllowPromptAsInput = true;
-            this.txtConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtConfirmPassword.AnimateReadOnly = false;
             this.txtConfirmPassword.AsciiOnly = false;
             this.txtConfirmPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -186,6 +180,7 @@
             this.txtConfirmPassword.TrailingIcon = null;
             this.txtConfirmPassword.UseSystemPasswordChar = false;
             this.txtConfirmPassword.ValidatingType = null;
+            this.txtConfirmPassword.Click += new System.EventHandler(this.txtConfirmPassword_Click);
             // 
             // btnSavePassword
             // 
@@ -210,7 +205,7 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("HP Simplified", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(189, 1);

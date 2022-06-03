@@ -44,10 +44,11 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bradley Hand ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(183, 9);
+            this.label1.Location = new System.Drawing.Point(189, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 26);
             this.label1.TabIndex = 1;
@@ -76,6 +77,7 @@
             // txtUsername
             // 
             this.txtUsername.AllowPromptAsInput = true;
+            this.txtUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtUsername.AnimateReadOnly = false;
             this.txtUsername.AsciiOnly = false;
             this.txtUsername.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -88,7 +90,7 @@
             this.txtUsername.Hint = "Username";
             this.txtUsername.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtUsername.LeadingIcon = null;
-            this.txtUsername.Location = new System.Drawing.Point(114, 53);
+            this.txtUsername.Location = new System.Drawing.Point(107, 53);
             this.txtUsername.Mask = "";
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
@@ -105,7 +107,7 @@
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(250, 48);
+            this.txtUsername.Size = new System.Drawing.Size(263, 48);
             this.txtUsername.SkipLiterals = true;
             this.txtUsername.TabIndex = 5;
             this.txtUsername.TabStop = false;
@@ -114,10 +116,12 @@
             this.txtUsername.TrailingIcon = null;
             this.txtUsername.UseSystemPasswordChar = false;
             this.txtUsername.ValidatingType = null;
+            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
             // 
             // txtPassword
             // 
             this.txtPassword.AllowPromptAsInput = true;
+            this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtPassword.AnimateReadOnly = false;
             this.txtPassword.AsciiOnly = false;
             this.txtPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -130,7 +134,7 @@
             this.txtPassword.Hint = "Password";
             this.txtPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(114, 119);
+            this.txtPassword.Location = new System.Drawing.Point(107, 119);
             this.txtPassword.Mask = "";
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
@@ -147,7 +151,7 @@
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(250, 48);
+            this.txtPassword.Size = new System.Drawing.Size(263, 48);
             this.txtPassword.SkipLiterals = true;
             this.txtPassword.TabIndex = 6;
             this.txtPassword.TabStop = false;
@@ -160,6 +164,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnLogin.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
@@ -167,7 +172,7 @@
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogin.HighEmphasis = true;
             this.btnLogin.Icon = null;
-            this.btnLogin.Location = new System.Drawing.Point(154, 197);
+            this.btnLogin.Location = new System.Drawing.Point(145, 197);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLogin.Name = "btnLogin";
@@ -182,13 +187,14 @@
             // 
             // btnSignUp
             // 
+            this.btnSignUp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnSignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSignUp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSignUp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(250, 197);
+            this.btnSignUp.Location = new System.Drawing.Point(256, 197);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
@@ -203,10 +209,11 @@
             // 
             // close
             // 
+            this.close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.close.BackColor = System.Drawing.Color.White;
             this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.close.Location = new System.Drawing.Point(440, -4);
+            this.close.Location = new System.Drawing.Point(451, -4);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(30, 30);
             this.close.TabIndex = 9;
@@ -218,7 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(469, 261);
+            this.ClientSize = new System.Drawing.Size(480, 272);
             this.Controls.Add(this.close);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);
