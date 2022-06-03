@@ -49,8 +49,9 @@ namespace EmpManagement
                     {
                         Session.sessionUsername = txtUsername.Text.Trim();
                         MessageBox.Show("Login success");
-                        Home home = new Home();
-                        home.Show();
+                        //Home home = new Home();
+                        //home.Show();
+                        Home.getInstance().Show();
                         this.Hide();
                     }
                 }

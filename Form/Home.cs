@@ -10,6 +10,26 @@ namespace EmpManagement
         {
             InitializeComponent();
         }
+
+        private static Home instance;
+
+        private static readonly object lockObject = new object();
+
+        public static Home getInstance()
+        {
+            if (instance == null)
+            {
+                lock (lockObject)
+                {
+                    if (instance == null)
+                    {
+                        instance = new Home();
+                    }
+                }
+            }
+            return instance;
+        }
+
         private void labelOpenEmployee_Click(object sender, EventArgs e)
         {
             handleOpenEmployee();
