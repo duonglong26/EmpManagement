@@ -91,5 +91,15 @@ namespace EmpManagement
         {
             return "select * from Account where username = '"  + username + "'";
         }
+
+        public static String getQueryPasswordByCurrentUser()
+        {
+            return "select * from Account where username = '" + Session.sessionUsername + "'";
+        }
+
+        public static String getQueryUpdatePasswordByCurrentUser(String newPassword)
+        {
+            return "update Account set password = '" + newPassword + "' where username = '" + Session.sessionUsername + "'";
+        }
     }
 }

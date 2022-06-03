@@ -135,7 +135,7 @@
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.PrefixSuffixText = null;
             this.txtPassword.PromptChar = '_';
             this.txtPassword.ReadOnly = false;

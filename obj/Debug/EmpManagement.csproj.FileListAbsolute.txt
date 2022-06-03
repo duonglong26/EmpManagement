@@ -131,3 +131,4 @@ C:\Users\HP\Máy tính\Backup\EmpManagement\obj\Debug\EmpManagement.FilterEmploy
 C:\Users\HP\Máy tính\Backup\EmpManagement\obj\Debug\EmpManagement.SignUp.resources
 C:\Users\HP\Máy tính\Backup\EmpManagement\bin\Debug\BCrypt.Net.dll
 C:\Users\HP\Máy tính\Backup\EmpManagement\bin\Debug\BCrypt.Net.xml
+C:\Users\HP\Máy tính\Backup\EmpManagement\obj\Debug\EmpManagement.FormChangePassword.resources

@@ -56,5 +56,22 @@ namespace EmpManagement
         {
             Application.Exit();
         }
+
+        private void pictureChangePassword_Click(object sender, EventArgs e)
+        {
+            handleShowFormPassword();
+        }
+
+        private void lbChangePassword_Click(object sender, EventArgs e)
+        {
+            handleShowFormPassword();
+        }
+
+        private void handleShowFormPassword()
+        {
+            FormChangePassword formChangePassword = new FormChangePassword();
+            formChangePassword.Show();
+            this.Hide();
+        }
     }
 }

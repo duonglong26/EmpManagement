@@ -24,8 +24,6 @@ namespace EmpManagement
 
         private void txtPassword_Click(object sender, EventArgs e)
         {
-            // The password character is an asterisk.
-            txtPassword.PasswordChar = '*';
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -35,7 +33,7 @@ namespace EmpManagement
                 MessageBox.Show("Please fill username/password");
                 return;
             }
-            
+
             try
             {
                 conn.Open();
@@ -46,7 +44,7 @@ namespace EmpManagement
                 while (sqlDataReader.Read())
                 {
                     bool checkPass = BCrypt.Net.BCrypt.Verify(txtPassword.Text.Trim(), sqlDataReader["password"].ToString());
-                    
+
                     if (checkPass)
                     {
                         Session.sessionUsername = txtUsername.Text.Trim();
@@ -55,12 +53,15 @@ namespace EmpManagement
                         home.Show();
                         this.Hide();
                     }
-                    conn.Close();
-                    return;
                 }
-                
+
+                conn.Close();
+
                 // account not found
-                MessageBox.Show("Login fail!");
+                if (Session.sessionUsername == null)
+                {
+                    MessageBox.Show("Login fail!");
+                }
             }
             catch (Exception ex)
             {

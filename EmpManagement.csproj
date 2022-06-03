@@ -157,6 +157,12 @@
   <ItemGroup>
     <Compile Include="Enity\Account.cs" />
     <Compile Include="Enity\Session.cs" />
+    <Compile Include="Form\FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FilterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
