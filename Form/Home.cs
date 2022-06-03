@@ -42,8 +42,9 @@ namespace EmpManagement
 
         private void handleOpenEmployee()
         {
-            Employee employee = new Employee();
-            employee.Show();
+            //Employee employee = new Employee();
+            //employee.Show();
+            Employee.getInstance().Show();
             this.Hide();
         }
 

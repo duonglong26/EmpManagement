@@ -68,8 +68,9 @@ namespace EmpManagement
 
         private void btnGoToHome_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.Show();
+            //Home home = new Home();
+            //home.Show();
+            Home.getInstance().Show();
             this.Hide();
         }
 

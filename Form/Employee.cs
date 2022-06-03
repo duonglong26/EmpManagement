@@ -18,6 +18,26 @@ namespace EmpManagement
             InitializeComponent();
         }
 
+        private static Employee instance;
+
+        private static readonly object lockObject = new object();
+
+        public static Employee getInstance()
+        {
+            if (instance == null)
+            {
+                lock (lockObject)
+                {
+                    if (instance == null)
+                    {
+                        instance = new Employee();
+                    }
+                }
+            }
+            return instance;
+        }
+
+
         private void Employee_Load(object sender, EventArgs e)
         {
             loadTableEmpData();
@@ -198,8 +218,9 @@ namespace EmpManagement
 
         private void btnGoToHome_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.Show();
+            //Home home = new Home();
+            //home.Show();
+            Home.getInstance().Show();
             this.Hide();
         }
 
