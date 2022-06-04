@@ -134,3 +134,4 @@ C:\Users\HP\Máy tính\Backup\EmpManagement\obj\Debug\EmpManagement.FormEmployee
 C:\Users\HP\Máy tính\Backup\EmpManagement\obj\Debug\EmpManagement.FormHome.resources
 C:\Users\HP\Máy tính\Backup\EmpManagement\obj\Debug\EmpManagement.FormLogin.resources
 C:\Users\HP\Máy tính\Backup\EmpManagement\obj\Debug\EmpManagement.FormSignUp.resources
+C:\Users\HP\Máy tính\Backup\EmpManagement\obj\Debug\EmpManagement.FormConfirmPassword.resources

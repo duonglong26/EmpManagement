@@ -50,7 +50,8 @@ namespace EmpManagement
                 conn.Close();
                 if (result > 0)
                 {
-                    FormChangePassword.getInstance().Show();
+                    FormConfirmPassword.getInstance().Show();
+                    FormConfirmPassword.getInstance().setUsername(username);
                     return;
                 }
             }

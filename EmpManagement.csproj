@@ -156,6 +156,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\FormConfirmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FormConfirmPassword.Designer.cs">
+      <DependentUpon>FormConfirmPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormConfirmOTP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +217,9 @@
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Form\FormConfirmOTP.resx">
       <DependentUpon>FormConfirmOTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FormConfirmPassword.resx">
+      <DependentUpon>FormConfirmPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FormForgotPassword.resx">
       <DependentUpon>FormForgotPassword.cs</DependentUpon>

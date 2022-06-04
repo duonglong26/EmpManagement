@@ -101,7 +101,12 @@ namespace EmpManagement
         {
             return "update Account set password = '" + newPassword + "' where username = '" + Session.sessionUsername + "'";
         }
-         
+
+        public static String getQueryUpdatePasswordUsername(String newPassword, String username)
+        {
+            return "update Account set password = '" + newPassword + "' where username = '" + username + "'";
+        }
+
         public static String getQueryInsertOtpTransaction(int otp, DateTime expireTime, String username)
         {
             return "insert into otp_transaction (otp, expire_time, username) values ('" + otp + "','" + expireTime + "','" + username + "')";
