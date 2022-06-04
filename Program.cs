@@ -14,7 +14,6 @@ namespace EmpManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(FormLogin.getInstance());
-            //Application.Run(new Login());
         }
     }
 }

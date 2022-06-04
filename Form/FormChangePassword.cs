@@ -119,7 +119,7 @@ namespace EmpManagement
         private void handleGoToHome()
         {
             FormHome.getInstance().Show();
-            this.Close();
+            this.Hide();
         }
 
         private void handleGoToLogin()

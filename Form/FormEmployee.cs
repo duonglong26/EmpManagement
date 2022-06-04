@@ -35,6 +35,7 @@ namespace EmpManagement
                 }
             }
             instance.resetFormInput();
+            instance.loadTableEmpData();
             return instance;
         }
 
