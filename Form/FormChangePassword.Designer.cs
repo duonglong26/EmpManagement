@@ -186,6 +186,7 @@
             // 
             this.btnSavePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnSavePassword.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSavePassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSavePassword.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSavePassword.Depth = 0;
             this.btnSavePassword.HighEmphasis = true;
