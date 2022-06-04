@@ -62,6 +62,8 @@ namespace EmpManagement
                     conn.Close();
 
                     FormLogin.getInstance().Show();
+                    //FormForgotPassword.getInstance().Hide();
+                    this.Hide();
                 }
                 catch (Exception ex)
                 {
@@ -75,6 +77,11 @@ namespace EmpManagement
         {
             txtNewPassword.Text = "";
             txtConfirmPassword.Text = "";
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

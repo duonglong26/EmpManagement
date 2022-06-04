@@ -67,7 +67,7 @@
             this.txtNewPassword.SelectionLength = 0;
             this.txtNewPassword.SelectionStart = 0;
             this.txtNewPassword.ShortcutsEnabled = true;
-            this.txtNewPassword.Size = new System.Drawing.Size(323, 48);
+            this.txtNewPassword.Size = new System.Drawing.Size(346, 48);
             this.txtNewPassword.SkipLiterals = true;
             this.txtNewPassword.TabIndex = 14;
             this.txtNewPassword.TabStop = false;
@@ -110,7 +110,7 @@
             this.txtConfirmPassword.SelectionLength = 0;
             this.txtConfirmPassword.SelectionStart = 0;
             this.txtConfirmPassword.ShortcutsEnabled = true;
-            this.txtConfirmPassword.Size = new System.Drawing.Size(323, 48);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(346, 48);
             this.txtConfirmPassword.SkipLiterals = true;
             this.txtConfirmPassword.TabIndex = 15;
             this.txtConfirmPassword.TabStop = false;
@@ -124,11 +124,12 @@
             // 
             this.btnSavePassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnSavePassword.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSavePassword.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSavePassword.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.btnSavePassword.Depth = 0;
             this.btnSavePassword.HighEmphasis = true;
             this.btnSavePassword.Icon = null;
-            this.btnSavePassword.Location = new System.Drawing.Point(217, 165);
+            this.btnSavePassword.Location = new System.Drawing.Point(247, 165);
             this.btnSavePassword.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSavePassword.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSavePassword.Name = "btnSavePassword";
@@ -153,6 +154,7 @@
             this.close.TabIndex = 17;
             this.close.Text = "X";
             this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // FormConfirmPassword
             // 
@@ -165,6 +167,7 @@
             this.Controls.Add(this.txtNewPassword);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConfirmPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConfirmPassword";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -52,6 +52,8 @@ namespace EmpManagement
                 {
                     FormConfirmPassword.getInstance().Show();
                     FormConfirmPassword.getInstance().setUsername(username);
+                    FormForgotPassword.getInstance().Hide();
+                    this.Hide();
                     return;
                 }
             }
