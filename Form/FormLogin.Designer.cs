@@ -50,11 +50,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bradley Hand ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(189, 9);
+            this.label1.Location = new System.Drawing.Point(140, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 26);
+            this.label1.Size = new System.Drawing.Size(218, 26);
             this.label1.TabIndex = 1;
-            this.label1.Text = "EmpiSoft";
+            this.label1.Text = "Employee Management";
             // 
             // pictureBox1
             // 
@@ -92,7 +92,7 @@
             this.txtUsername.Hint = "Username";
             this.txtUsername.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtUsername.LeadingIcon = null;
-            this.txtUsername.Location = new System.Drawing.Point(107, 53);
+            this.txtUsername.Location = new System.Drawing.Point(123, 53);
             this.txtUsername.Mask = "";
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MouseState = MaterialSkin.MouseState.OUT;
@@ -136,7 +136,7 @@
             this.txtPassword.Hint = "Password";
             this.txtPassword.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
             this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(107, 119);
+            this.txtPassword.Location = new System.Drawing.Point(123, 119);
             this.txtPassword.Mask = "";
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
@@ -174,7 +174,7 @@
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnLogin.HighEmphasis = true;
             this.btnLogin.Icon = null;
-            this.btnLogin.Location = new System.Drawing.Point(145, 197);
+            this.btnLogin.Location = new System.Drawing.Point(161, 197);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLogin.Name = "btnLogin";
@@ -196,7 +196,7 @@
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(249, 197);
+            this.btnSignUp.Location = new System.Drawing.Point(265, 197);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
@@ -215,7 +215,7 @@
             this.close.BackColor = System.Drawing.Color.White;
             this.close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.close.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.close.Location = new System.Drawing.Point(451, -4);
+            this.close.Location = new System.Drawing.Point(483, -4);
             this.close.Name = "close";
             this.close.Size = new System.Drawing.Size(30, 30);
             this.close.TabIndex = 9;
@@ -233,10 +233,11 @@
             // 
             // forgotPassword
             // 
+            this.forgotPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.forgotPassword.AutoSize = true;
             this.forgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgotPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.forgotPassword.Location = new System.Drawing.Point(162, 261);
+            this.forgotPassword.Location = new System.Drawing.Point(176, 261);
             this.forgotPassword.Name = "forgotPassword";
             this.forgotPassword.Size = new System.Drawing.Size(136, 16);
             this.forgotPassword.TabIndex = 11;
@@ -244,11 +245,11 @@
             this.forgotPassword.Text = "Forgot Password ?";
             this.forgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotPassword_LinkClicked);
             // 
-            // Login
+            // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 334);
+            this.ClientSize = new System.Drawing.Size(512, 306);
             this.Controls.Add(this.forgotPassword);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.close);
@@ -260,7 +261,7 @@
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Login";
+            this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

@@ -31,6 +31,7 @@ namespace EmpManagement
                     }
                 }
             }
+            instance.txtOtp.Text = "";
             return instance;
         }
 
