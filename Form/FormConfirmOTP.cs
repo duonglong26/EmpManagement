@@ -50,6 +50,12 @@ namespace EmpManagement
                 conn.Close();
                 if (result > 0)
                 {
+                    conn.Open();
+                    String queryDisableOtp = Utils.getQueryDisableOtpTransactionByOtp(txtOtp.Text.Trim());
+                    SqlCommand cmdDisableOtp = new SqlCommand(queryDisableOtp, conn);
+                    cmdDisableOtp.ExecuteNonQuery();
+                    conn.Close();
+
                     FormConfirmPassword.getInstance().Show();
                     FormConfirmPassword.getInstance().setUsername(username);
                     FormForgotPassword.getInstance().Hide();

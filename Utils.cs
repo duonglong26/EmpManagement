@@ -116,6 +116,11 @@ namespace EmpManagement
             return "update otp_transaction set disable = 1 where username = '" + username + "'";
         }
 
+        public static String getQueryDisableOtpTransactionByOtp(String otp)
+        {
+            return "update otp_transaction set disable = 1 where otp = '" + otp + "'";
+        }
+
         public static String getQueryCheckOtp(String otp, String username)
         {
             return "select count(*) from otp_transaction as e where " +
